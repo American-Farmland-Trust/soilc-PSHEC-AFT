@@ -39,7 +39,7 @@ d <- plyr::ldply(years, function(x){
         GEOID = paste(state_ansi, county_ansi, sep = ""),
         Yield_mg_ha = as.numeric(Value) * 0.0628
       ) %>%
-      select(
+      dplyr::select(
         year,
         GEOID,
         state_alpha,
@@ -51,7 +51,12 @@ d <- plyr::ldply(years, function(x){
   )
 })
 
+#ATR addition: write the pulled nass data as it's own data file so we no longer have to pull it every time
+write_rds(d, path = "data/nass_03142023.rds")
 
+## ATR: From here we can start with read_rds("data/nass_03142023.rds")
+
+#Dan's code:
 ### Total acres
 
 census.years <- as.list(c(1997,2002,2007,2012))
@@ -77,7 +82,7 @@ d.acres.total <- plyr::ldply(census.years, function(x) {
           Value, pattern = ",", replacement = ""
         ))
       ) %>%
-      select(
+      dplyr::select(
         year,
         GEOID,
         state_alpha,
@@ -89,6 +94,7 @@ d.acres.total <- plyr::ldply(census.years, function(x) {
   )
 })
 
+#ATR: The next two steps are not needed if we are running the data without removing the irrigated land
 
 ##### IRRIGATED ACRES
 
@@ -113,7 +119,7 @@ d.acres.irrigated <- plyr::ldply(census.years, function(x) {
           Value, pattern = ",", replacement = ""
         ))
       ) %>%
-      select(
+      dplyr::select(
         year,
         GEOID,
         state_alpha,
@@ -125,7 +131,7 @@ d.acres.irrigated <- plyr::ldply(census.years, function(x) {
   )
 })
 
-##
+## ATR: This creates a percentage of irrigated land by GEOID
 
 d.acres <- d.acres.total %>%
   left_join(d.acres.irrigated) %>%
@@ -147,13 +153,18 @@ d.irrgiated.filter <- d.acres %>%
   filter(Mean.percent.irrigated <= 0.05) %>%
   filter(SD.percent.irrigated <= 0.01) 
 
+#ATR to make a data set without filtering the irrigated land we need to repeat this process 
+#using the d.acres.total (although a major question is: do we need this step or can we use the d.acres.total by itself?)
+#it also look like at this point he filtered to 15 years of corn observations. If we are using cropscape again in the 
+#gSSURGO processing2 step do we need this step? 
+
 d <- d %>%
   filter(GEOID %in% d.irrgiated.filter$GEOID) %>% #Filter to counties < 5% irrigated
   group_by(GEOID) %>%
   add_count(GEOID) %>%
   filter(n >= 15) %>% # Filter to >=15 corn yield observations
   ungroup(.) %>%
-  select(-n)
+  dplyr::select(-n)
 
 
 mod <- function(df){
@@ -181,7 +192,7 @@ mod <- function(df){
 
 d_list <- split(d, f = d$GEOID)
 
-d_list <- mclapply(X = d_list,FUN = mod, mc.cores = 40)
+d_list <- mclapply(X = d_list,FUN = mod, mc.cores = 1)
 
 d <- dplyr::bind_rows(d_list)
 
