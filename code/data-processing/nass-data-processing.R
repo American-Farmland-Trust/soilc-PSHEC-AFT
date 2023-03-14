@@ -5,6 +5,7 @@ library(ggplot2)
 library(tidyr)
 library(reshape2)
 library(caret)
+library(parallel)
 
 api_key <- as.character(read.csv("code/NASS_API_key.csv", header = F)[1,1])       # api key
 # Specify the range of years across which you want to collect data
