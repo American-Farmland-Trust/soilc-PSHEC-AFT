@@ -138,7 +138,7 @@ all_data %>%
 # these models might get dinged for being over-parameterized
 m.state.sqrt.f <- all.data.stan %>%
   lm(data = ., 
-                 formula = Yield_decomp_add ~ summer_spei*ssurgo_om_mean_sqrt*ssurgo_h*ssurgo_clay_mean+ state_alpha)
+  formula = Yield_decomp_add ~ summer_spei*ssurgo_om_mean_sqrt*ssurgo_h*ssurgo_clay_mean+ state_alpha)
 
 summary(m.state.sqrt.f)
 
