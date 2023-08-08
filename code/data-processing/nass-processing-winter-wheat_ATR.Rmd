@@ -18,7 +18,8 @@ library(caret)
 library(parallel)
 library(readr)
 library(purrr)
-api_key <- as.character(read.csv("/home/shared/Kane_data/nass_key.csv", header = F)[1,1])       # api key
+#api_key <- as.character(read.csv("/home/shared/Kane_data/nass_key.csv", header = F)[1,1])       # api key
+api_key <- as.character(read.csv("code/NASS_API_key.csv", header = F)[1,1])       # api key
 
 # Call in all corn yield data via NASS API ####
 
@@ -51,7 +52,8 @@ d.wheat <- plyr::ldply(years, function(x){
     year = x,
     agg_level_desc = "COUNTY", 
     source_desc = "SURVEY",  # change source to source_desc
-    domain_desc = "TOTAL"
+    domain_desc = "TOTAL",
+    short_desc = "WHEAT, WINTER - YIELD, MEASURED IN BU / ACRE"  #ML: added winter wheat option; if not run, disable this line and filter at the end
   )
   
   return(
@@ -77,6 +79,7 @@ d.wheat <- plyr::ldply(years, function(x){
   )
 })
 
+
 #ATR addition: write the pulled nass data as it's own data file so we no longer have to pull it every time
 #write_rds(d.wheat, path = "/home/aysha/Kane_data/nass_wheat_050523.rds")
 ```
@@ -93,6 +96,9 @@ short_desc for irrigated = "WHEAT, IRRIGATED - ACRES HARVESTED", "WHEAT, SPRING,
 ```{r}
 unique(d.wheat$short_desc)
 d.wheat %>% count(short_desc, sort = TRUE)
+d.wheat <- d.wheat %>%
+  filter(short_desc ==  'WHEAT, WINTER - YIELD, MEASURED IN BU / ACRE')
+
 ```
 
 ATR: For some reason running the code filtering for short_desc other than just WHEAT sends an error, so I removed the filtering by short_desc, added it to the resulting data frame and subset from there, I also removed the NAs, but it looks like he also does that in the next step, so this is unnecessary. I did the same thing with the irrigated 
@@ -109,7 +115,8 @@ d.wheat.acres.total <- plyr::ldply(census.years, function(x) {
     source_desc = "CENSUS",
     year = x,
     agg_level_desc = "COUNTY",
-    domain_desc = "TOTAL"
+    domain_desc = "TOTAL",
+    #short_desc = "WHEAT, WINTER - ACRES HARVESTED"  #ML: added winter wheat option; if not run, disable this line and filter at the end
   )
   
   return(
@@ -141,7 +148,9 @@ d.wheat.acres.total <- plyr::ldply(census.years, function(x) {
 unique(d.wheat.acres.total$short_desc)
 d.wheat.acres.total %>% count(short_desc, sort = TRUE)
 d.wheat.acres.total <- d.wheat.acres.total %>% 
-  subset(short_desc == "WHEAT, WINTER - ACRES HARVESTED") %>% drop_na(Acres_total)
+  subset(short_desc == "WHEAT, WINTER - ACRES HARVESTED") %>% 
+  drop_na(Acres_total) %>%
+  dplyr::select(-short_desc)  # ML: remove short_desc column
 d.wheat.acres.total
 ```
 
@@ -189,7 +198,8 @@ unique(d.wheat.acres.irrigated$short_desc)
 d.wheat.acres.irrigated %>% count(short_desc, sort = TRUE)
 d.wheat.acres.irrigated <- d.wheat.acres.irrigated %>% 
   subset(short_desc == "WHEAT, WINTER, IRRIGATED - ACRES HARVESTED") %>% 
-  drop_na(Acres_irrigated)
+  drop_na(Acres_irrigated) %>%
+  dplyr::select(-short_desc) # ML: remove short_desc column
 d.wheat.acres.irrigated
 ```
 
@@ -229,17 +239,15 @@ irrigated == 'rainfed' means less than 5% of acres of a county were irrigated
 
 ```{r filter}
 
-
-
-
 d.wheat.15 <- d.wheat %>%
   mutate(irrigated = case_when(GEOID %in% d.wheat.irrgiated.filter$GEOID ~ 'rainfed',
                                TRUE ~ 'irrigated')) %>%
+  filter(short_desc == 'WHEAT, WINTER - YIELD, MEASURED IN BU / ACRE') %>% #ML: filter winter wheat
   group_by(GEOID) %>%
   add_count(GEOID) %>%
   filter(n >= 15) %>% # Filter to >=15 wheat yield observations #ATR: This is where he resricts the acres to 15 years of corn
   ungroup(.) %>%
-  dplyr::select(-n) #48692 obs of 8 variables
+  dplyr::select(-n) #21721 obs of 8 variables
 
 ```
 
@@ -285,9 +293,9 @@ d.wheat.15$year <- as.integer(d.wheat.15$year) # year needs to be converted to i
 d_wheat.list_15 <- split(d.wheat.15, f = d.wheat.15$GEOID) # ML: it creates a list based on county
 
 tic()
-d_wheat.list_15.1 <- mclapply(X = d_wheat.list_15,FUN = mod, mc.cores = 28) 
+d_wheat.list_15.1 <- mclapply(X = d_wheat.list_15,FUN = mod, mc.cores = 1) #mc.cores = 28
 toc()
-# 161.737 sec elapsed
+# 3188.06 sec elapsed
 
 d.wheat.15 <- dplyr::bind_rows(d_wheat.list_15.1)
 
@@ -299,8 +307,7 @@ d.wheat.15.1 <- d.wheat.15 %>%
          Yield_decomp_mult = Yield_mg_ha/Detrend_predictions) # yield anomaly
 
 # saved the data to a rds file to be used for downstream processing
-write_rds(d.wheat.15.1, file = "/home/aysha/Kane_data/winter_wheat_yield_2000-2022_w_irrigation_n_15.rds")
-
+write_rds(d.wheat.15.1, file = "data/AFT-data/winter_wheat_yield_2000-2022_w_irrigation_n_15.rds")
 
 ```
 
