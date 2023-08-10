@@ -2,6 +2,8 @@
 title: "Untitled"
 output: html_document
 date: "2023-05-04"
+editor_options: 
+  chunk_output_type: console
 ---
 
 
@@ -19,6 +21,9 @@ library(parallel)
 library(readr)
 library(purrr)
 api_key <- as.character(read.csv("/home/shared/Kane_data/nass_key.csv", header = F)[1,1])       # api key
+
+api_key <- as.character(read.csv("code/NASS_API_key.csv", header = F)[1,1])       # api key
+
 
 # Call in all corn yield data via NASS API ####
 
