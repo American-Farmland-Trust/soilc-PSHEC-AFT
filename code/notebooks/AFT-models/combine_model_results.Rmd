@@ -1,0 +1,398 @@
+---
+title: "check model results"
+author: "ML"
+date: "2023-06-27"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr)
+library(gghighlight)
+library(tidyr)  
+```
+
+# read comet data
+
+```{r comet}
+comet <- read.csv('data/soil/Comet_data/Comet-somcals-062423_update.csv')
+names(comet)
+
+comet_cal <- comet %>% 
+  select(fipsint, state, county, cpsnum, cps_name, planner_implementation, X.SOM.yr) %>%
+  mutate(SOM10 = X.SOM.yr * 10) %>%
+  rename(GEOID = fipsint) %>%
+  mutate(cps_group = case_when( cpsnum == 328 ~ 'Conservation Crop Rotation',
+                                cpsnum == 590 ~ 'Nutrient Management',
+                                #cpsnum == 340 ~ 'Cover Crop',
+                                cpsnum %in% c(329,345) ~ 'Tillage')) %>%
+  na.omit() %>%
+  filter(state != 'HI') %>%
+  group_by(GEOID, state, county, cps_group) %>%
+  top_n(1, SOM10) %>%
+  #group_by(GEOID) %>%
+  #add_count() %>%
+  select(GEOID, state, county, cps_group, SOM10) %>% 
+  unique()
+
+comet_sum.1 <- comet_cal %>%
+  group_by(GEOID) %>%
+  summarize(total_SOM10 = sum(SOM10)) 
+
+comet_sum.1$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
+
+#write.csv(comet_sum, file = 'data/soil/Comet_data/Comet-som-county-max-sum.csv', row.names = FALSE)
+  
+hist(comet_sum$total_SOM10)
+
+```
+
+# combine model predictions
+
+corn 
+```{r data}
+# comet sum data
+comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
+
+# ML predictions
+group_23_ML <- read.csv('data/soil/Coefficients/corn/group_23_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+
+I_ML <- read.csv('data/soil/Coefficients/corn/IA_IL_IN_OH_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+
+all_ML <- bind_rows(group_23_ML,I_ML)
+
+all_ML$GEOID <- formatC(all_ML$GEOID, width = 5, format = 'd' ,flag = '0')
+
+all_ML <- all_ML %>% select(state_alpha, GEOID, ssurgo_om_mean,ssurgo_om_county_mean,pred_yield,pred_lower,pred_upper,county_name)
+
+ML_results <- all_ML %>%
+  #inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
+  left_join(comet_sum, by = 'GEOID') 
+  
+write.csv(ML_results, file = 'data/soil/Comet_data/corn_all_yield_predictions_intervals_machine_learning_model.csv')
+
+# plot
+ggplot(all_ML) +
+  geom_line(aes(x = ssurgo_om_mean, y = pred_yield, group = GEOID),linewidth = 0.5, alpha = 0.5, color = 'darkgray') +
+  #gghighlight(state_alpha == 'PA' )+
+  #labs(title = 'PA') +
+  theme_bw()
+
+# try ML predictions using all states ML model
+
+#all_state_ML <- read.csv('data/soil/Coefficients/all_ML_model_yield_predictions.csv', row.names = 'X')
+
+#all_state_ML$GEOID <- formatC(all_state_ML$GEOID, width = 5, format = 'd' ,flag = '0')
+
+#all_state_ML <- all_state_ML %>% select(state_alpha, GEOID, ssurgo_om_mean,ssurgo_om_county_mean,pred_yield,county_name)
+
+
+```
+
+Soy 
+
+```{r data}
+# comet sum data
+comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
+
+# ML predictions
+group_soy_ML <- read.csv('data/soil/Coefficients/soy/group_23_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+
+I_soy_ML <- read.csv('data/soil/Coefficients/soy/IA_IL_IN_OH_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+
+all_soy_ML <- bind_rows(group_soy_ML,I_soy_ML)
+
+all_soy_ML$GEOID <- formatC(all_soy_ML$GEOID, width = 5, format = 'd' ,flag = '0')
+
+all_soy_ML <- all_soy_ML %>% select(state_alpha, GEOID, ssurgo_om_mean,ssurgo_om_county_mean,pred_yield,pred_lower,pred_upper,county_name)
+
+ML_soy_results <- all_soy_ML %>%
+  #inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
+  left_join(comet_sum, by = 'GEOID') 
+  
+write.csv(ML_soy_results, file = 'data/soil/Comet_data/soy_all_yield_predictions_intervals_machine_learning_model.csv')
+
+# plot
+ggplot(all_soy) +
+  geom_line(aes(x = ssurgo_om_mean, y = pred_yield, group = GEOID),linewidth = 0.5, alpha = 0.5, color = 'darkgray') +
+  #gghighlight(state_alpha == 'PA' )+
+  labs(title = 'Soybean') +
+  theme_bw()
+
+```
+
+Wheat
+
+```{r wheat}
+# comet sum data
+comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
+
+# ML predictions
+all_wheat_ML <- read.csv('data/soil/Coefficients/wheat/all_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+
+all_wheat_ML$GEOID <- formatC(all_wheat_ML$GEOID, width = 5, format = 'd' ,flag = '0')
+
+all_wheat_ML <- all_wheat_ML %>% select(state_alpha, GEOID, ssurgo_om_mean,ssurgo_om_county_mean,pred_yield,pred_lower,pred_upper,county_name)
+
+ML_wheat_results <- all_wheat_ML %>%
+  #inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
+  left_join(comet_sum, by = 'GEOID') 
+  
+write.csv(ML_wheat_results, file = 'data/soil/Comet_data/wheat_all_yield_predictions_intervals_machine_learning_model.csv')
+
+
+```
+
+#compare linear model predictions and machine learning predictions (didn't use linear model)
+```{r plot}
+# linear predictions
+IA_IL_IN_OH_lm <- read.csv('data/soil/Coefficients/IA_IL_IN_OH_lm_model_OM_range_yield_predictions.csv', row.names = 'X')
+MN_MI_WI_lm <- read.csv('data/soil/Coefficients/MN_MI_WI_lm_model_OM_range_yield_predictions.csv', row.names = 'X') 
+KY_MO_TN_lm <- read.csv('data/soil/Coefficients/KY_MO_TN_lm_model_OM_range_yield_predictions.csv', row.names = 'X') 
+MD_NY_NJ_PA_lm <- read.csv('data/soil/Coefficients/MD_NY_NJ_PA_lm_model_OM_range_yield_predictions.csv', row.names = 'X') 
+NC_SC_WV_VA_lm <- read.csv('data/soil/Coefficients/NC_SC_WV_VA_lm_model_OM_range_yield_predictions.csv', row.names = 'X')
+KS_ND_NE_OK_SD_lm <- read.csv('data/soil/Coefficients/KS_ND_NE_OK_SD_lm_model_OM_range_yield_predictions.csv', row.names = 'X') 
+AL_LA_MS_TX_lm <- read.csv('data/soil/Coefficients/AL_LA_MS_TX_lm_model_OM_range_yield_predictions.csv', row.names = 'X')
+
+all_lm <- bind_rows(IA_IL_IN_OH_lm,
+                    MN_MI_WI_lm,
+                    KY_MO_TN_lm,
+                    MD_NY_NJ_PA_lm,
+                    NC_SC_WV_VA_lm,
+                    KS_ND_NE_OK_SD_lm,
+                    AL_LA_MS_TX_lm)
+
+all_lm$GEOID <- formatC(all_lm$GEOID, width = 5, format = 'd' ,flag = '0')
+
+all_lm <- all_lm %>% select(state_alpha, GEOID, ssurgo_om_mean,ssurgo_om_county_mean,pred_yield,county_name)
+
+# plot
+ggplot(all_ML) +
+  geom_line(aes(x = ssurgo_om_mean, y = pred_yield, group = GEOID),linewidth = 0.5, alpha = 0.5, color = 'darkgray') +
+  #gghighlight(state_alpha == 'PA' )+
+  #labs(title = 'PA') +
+  theme_bw()
+
+ggplot(all_lm) +
+  geom_line(aes(x = ssurgo_om_mean, y = pred_yield, group = GEOID),linewidth = 0.5, alpha = 0.5, color='darkgray') +
+  #scale_y_continuous(limits = c(-20,20)) +
+  #gghighlight(state_alpha == 'WI' )+
+  #labs(title = 'WI') +
+  theme_bw()
+
+# compare state model vs. all_model predictions
+compare_model <- all_ML %>%
+  rename(pred_yield_ML = pred_yield) %>%
+  inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
+  left_join(comet_sum, by = 'GEOID') %>%
+  rename(pred_yield_lm = pred_yield) %>%
+  filter(ssurgo_om_mean >= ssurgo_om_county_mean & ssurgo_om_mean <= ssurgo_om_county_mean + total_SOM10) %>%
+  group_by(state_alpha,county_name,GEOID) %>%
+  mutate(om_range = case_when(ssurgo_om_mean == min(ssurgo_om_mean) ~ 'low',
+                              ssurgo_om_mean == max(ssurgo_om_mean) ~ 'high')) %>%
+  na.omit()
+
+compare_yield_change <- compare_model %>%
+  pivot_wider(names_from = om_range, values_from = c(ssurgo_om_mean,pred_yield_lm,pred_yield_ML)) %>%
+  mutate(yield_change_ML = pred_yield_ML_high - pred_yield_ML_low,
+         yield_change_lm = pred_yield_lm_high - pred_yield_lm_low) %>%
+  #mutate(yield_change_diff = (yield_change_lm - yield_change_ML)/yield_change_ML * 100)
+  pivot_longer(names_to = 'model', values_to = 'pred_yield_change', cols = c(yield_change_ML,yield_change_lm))
+
+hist(compare_yield_change$yield_change_ML)
+hist(compare_yield_change$yield_change_lm)
+hist(compare_yield_change$pred_yield_change)
+
+ggplot(data = compare_yield_change, aes(x=pred_yield_change, fill=model)) +
+  geom_histogram(color = 'white', alpha=0.7, position = 'identity') +
+  scale_fill_manual(values=c('gold3', "#404080")) + #"#69b3a2"
+  facet_wrap(~state_alpha, scales = 'free') +
+  theme_bw()
+  
+
+```
+
+#map where did SOM change improve/decrease yield
+
+corn
+```{r map}
+# calculate yield change due to changes in SOM
+ML_yield_change <- all_ML %>%
+  left_join(comet_sum, by = 'GEOID') %>%
+  filter(ssurgo_om_mean >= ssurgo_om_county_mean & ssurgo_om_mean <= ssurgo_om_county_mean + total_SOM10) %>%
+  group_by(state_alpha,county_name,GEOID) %>%
+  mutate(om_range = case_when(ssurgo_om_mean == min(ssurgo_om_mean) ~ 'low',
+                              ssurgo_om_mean == max(ssurgo_om_mean) ~ 'high')) %>%
+  na.omit() %>%
+  pivot_wider(names_from = om_range, values_from = c(ssurgo_om_mean,pred_yield)) %>%
+  mutate(yield_change_ML = pred_yield_high - pred_yield_low) %>%
+  pivot_longer(names_to = 'model', values_to = 'pred_yield_change', cols = yield_change_ML) %>%
+  select(GEOID, ssurgo_om_county_mean,total_SOM10,pred_yield_change) %>%
+  rename(fips = GEOID)
+
+
+library(usmap)
+library(colorspace)
+
+# get state boundaries
+states <- us_map(regions = 'states', exclude = c('AK','HI'))
+
+# get county boundaries 
+county <- us_map(regions = 'counties')
+
+# combine data
+ML_yield_change_county <- ML_yield_change %>%
+  left_join(county, by = 'fips')
+
+#create the map
+ggplot() +
+  geom_polygon(data = ML_yield_change_county, aes(x =x, y=y, group = group,fill=pred_yield_change)) +
+  geom_polygon(data = states, aes(x = x, y = y, group = group), fill = NA, color = 'black') +
+  scale_fill_continuous_divergingx(palette = 'Spectral', rev = TRUE, mid = 0, n_interp = 11, name = 'Predicted yield change (Mg/ha)') + 
+  coord_equal() +
+  theme_void() 
+
+
+```
+
+soy
+
+```{r map}
+# calculate yield change due to changes in SOM
+ML_soy_change <- all_soy_ML %>%
+  left_join(comet_sum, by = 'GEOID') %>%
+  filter(ssurgo_om_mean >= ssurgo_om_county_mean & ssurgo_om_mean <= ssurgo_om_county_mean + total_SOM10) %>%
+  group_by(state_alpha,county_name,GEOID) %>%
+  mutate(om_range = case_when(ssurgo_om_mean == min(ssurgo_om_mean) ~ 'low',
+                              ssurgo_om_mean == max(ssurgo_om_mean) ~ 'high')) %>%
+  na.omit() %>%
+  pivot_wider(names_from = om_range, values_from = c(ssurgo_om_mean,pred_yield)) %>%
+  mutate(yield_change_ML = pred_yield_high - pred_yield_low) %>%
+  pivot_longer(names_to = 'model', values_to = 'pred_yield_change', cols = yield_change_ML) %>%
+  select(GEOID, ssurgo_om_county_mean,total_SOM10,pred_yield_change) %>%
+  rename(fips = GEOID)
+
+library(usmap)
+library(colorspace)
+
+# get state boundaries
+states <- us_map(regions = 'states', exclude = c('AK','HI'))
+
+# get county boundaries 
+county <- us_map(regions = 'counties')
+
+# combine data
+ML_soy_change_county <- ML_soy_change %>%
+  left_join(county, by = 'fips')
+
+#create the map
+ggplot() +
+  geom_polygon(data = ML_soy_change_county, aes(x =x, y=y, group = group,fill=pred_yield_change)) +
+  geom_polygon(data = states, aes(x = x, y = y, group = group), fill = NA, color = 'black') +
+  scale_fill_continuous_divergingx(palette = 'Spectral', rev = TRUE, mid = 0, n_interp = 11, name = 'Predicted yield change (Mg/ha)') + 
+  coord_equal() +
+  theme_void() 
+
+```
+
+Corn and soy data together
+
+```{r combine}
+all_corn <- read.csv('data/soil/Comet_data/corn_all_yield_predictions_intervals_machine_learning_model.csv', row.names = 'X')
+all_soy <- read.csv('data/soil/Comet_data/soy_all_yield_predictions_intervals_machine_learning_model.csv', row.names = 'X')
+
+corn_soy <- bind_rows(corn = all_corn, soy = all_soy, .id = 'crop') # too much data for plot
+
+# sample 500 counties
+sample_county <- as.data.frame(sample(unique(corn_soy$GEOID), 500))
+
+names(sample_county) <-'GEOID'
+
+corn_soy_sample <- sample_county %>%
+    left_join(corn_soy, by = 'GEOID')
+
+# plot predicted corn and soy yield lines on the sample plot
+ggplot(corn_soy) +
+  geom_line(aes(x = ssurgo_om_mean, y = pred_yield, color = crop, group = interaction(crop, GEOID)),linewidth = 0.5, alpha = 0.5) +
+  theme_bw()
+
+# predicted corn and soy yield by state
+ggplot(corn_soy) +
+  geom_line(aes(x = ssurgo_om_mean, y = pred_yield, color = crop, group = interaction(crop, GEOID)), linewidth = 0.5, alpha = 0.5) +
+  facet_wrap(~state_alpha) +
+  theme_bw()
+
+
+```
+
+wheat
+
+```{r map}
+# calculate yield change due to changes in SOM
+wheat_yield_change <- all_wheat_ML %>%
+  left_join(comet_sum, by = 'GEOID') %>%
+  filter(ssurgo_om_mean >= ssurgo_om_county_mean & ssurgo_om_mean <= ssurgo_om_county_mean + total_SOM10) %>%
+  group_by(state_alpha,county_name,GEOID) %>%
+  mutate(om_range = case_when(ssurgo_om_mean == min(ssurgo_om_mean) ~ 'low',
+                              ssurgo_om_mean == max(ssurgo_om_mean) ~ 'high')) %>%
+  na.omit() %>%
+  dplyr::select(-c(pred_lower,pred_upper)) %>%
+  pivot_wider(names_from = om_range, values_from = c(ssurgo_om_mean,pred_yield)) %>%
+  mutate(yield_change_ML = pred_yield_high - pred_yield_low) %>%
+  pivot_longer(names_to = 'model', values_to = 'pred_yield_change', cols = yield_change_ML) %>%
+  select(GEOID, ssurgo_om_county_mean,total_SOM10,pred_yield_change) %>%
+  rename(fips = GEOID)
+
+
+library(usmap)
+library(colorspace)
+
+# get state boundaries
+states <- us_map(regions = 'states', exclude = c('AK','HI'))
+
+# get county boundaries 
+county <- us_map(regions = 'counties')
+
+# combine data
+wheat_yield_change_county <- wheat_yield_change %>%
+  left_join(county, by = 'fips')
+
+#create the map
+ggplot() +
+  geom_polygon(data = wheat_yield_change_county, aes(x =x, y=y, group = group,fill=pred_yield_change)) +
+  geom_polygon(data = states, aes(x = x, y = y, group = group), fill = NA, color = 'black') +
+  scale_fill_continuous_divergingx(palette = 'Spectral', rev = TRUE, mid = 0, n_interp = 11, name = 'Predicted yield change (Mg/ha)') + 
+  coord_equal() +
+  labs(title = 'Winter Wheat') +
+  theme_void() 
+
+
+```
+
+# plot prediction intervals of corn, soy, wheat together
+
+```{r model_results}
+all_corn <- read.csv('data/soil/Comet_data/corn_all_yield_predictions_intervals_machine_learning_model.csv', row.names = 'X')
+all_soy <- read.csv('data/soil/Comet_data/soy_all_yield_predictions_intervals_machine_learning_model.csv', row.names = 'X')
+all_wheat <- read.csv('data/soil/Comet_data/wheat_all_yield_predictions_intervals_machine_learning_model.csv',row.names = 'X')
+
+corn_soy_wheat <- bind_rows(corn = all_corn, soy = all_soy, wheat = all_wheat, .id = 'crop') # too much data for plot
+
+corn_soy_wheat$GEOID <- formatC(corn_soy_wheat$GEOID, width = 5, format = 'd' ,flag = '0')
+
+
+# plot the two intervals, use IA 19001 as an example
+ggplot(data = filter(corn_soy_wheat, GEOID =='17005')) +
+  geom_ribbon(aes(x = ssurgo_om_mean, ymin = pred_lower, ymax = pred_upper, group = crop, fill = crop), alpha = 0.5)+
+  #geom_ribbon(data = filter(all_om_test_conf_int, GEOID =='19001'),aes(x = ssurgo_om_mean, ymin = conf_lower, ymax = conf_upper),  fill = 'gold', alpha = 0.3 ) +
+  geom_point(aes(x=ssurgo_om_mean, y = pred_yield), color = 'black') +
+  theme_bw()
+
+```
+

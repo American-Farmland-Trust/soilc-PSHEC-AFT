@@ -3,6 +3,8 @@ title: "Soy merge yield and soil data"
 author: "ATR"
 date: "2023-07-20"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 # copied from corn_all_data_merge-AFT.Rmd
@@ -30,10 +32,10 @@ library(readr)
 
 ```{r data}
 # Yield data
-yield <- read_rds('c:/Users/AyshaTappRoss/Github/soilc-midwest-DanKane/data/AFT-data/soy_yield_2000-2022_w_irrigation_n_15.rds')
+yield <- read_rds('data/AFT-data/soy_yield_2000-2022_w_irrigation_n_15.rds')
 
 #gssurgo soil data
-soil <- read_rds('c:/Users/AyshaTappRoss/Github/soilc-midwest-DanKane/data/AFT-data/soy_gssurgo.soil.stats_n_15_filter_om10.rds')
+soil <- read_rds('data/AFT-data/soy_gssurgo.soil.stats_n_15_filter_om10.rds')
 
 ```
 
@@ -84,7 +86,7 @@ all.data.stan <- all_data.1 %>%
 # explore data using ggplots 
 
 ```{r check}
-all_data <- read_rds('c:/Users/AyshaTappRoss/Github/soilc-midwest-DanKane/data/AFT-data/soy_all_data_n15_om10_AFT.rds')
+all_data <- read_rds('data/AFT-data/soy_all_data_n15_om10_AFT.rds')
 
 
 rainfed <- all_data %>% filter(irrigated == 'rainfed')
