@@ -1,0 +1,92 @@
+---
+title: "Untitled"
+author: "ATR"
+date: "2023-08-01"
+output: html_document
+---
+
+```{r}
+library(sf)
+library(tigris)
+library(tidyverse)
+library(lme4)
+library(mgcv)
+#library(itsadug)
+#library(reghelper)
+library(caret)
+library(parallel)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(ggpubr)
+library(readr)
+```
+
+```{r}
+corn_data <- read_rds('data/AFT-data/corn_all_data_n15_om10_AFT.rds')
+soy_data <- read_rds('data/AFT-data/soy_all_data_n15_om10_AFT.rds')
+wheat_data <- read_rds('data/AFT-data/wheat_all_data_n15_om10_AFT.rds')
+```
+
+
+```{r}
+
+write.csv(corn_data, 'data/AFT-data/corn_all_data_n15_om10_AFT.csv')
+write.csv(soy_data, 'data/AFT-data/soy_all_data_n15_om10_AFT.csv')
+write.csv(wheat_data, 'data/AFT-data/wheat_all_data_n15_om10_AFT.csv')
+
+```
+
+
+```{r}
+corn_counties <- corn_data %>% select(GEOID) %>% unique()
+soy_counties <- soy_data %>% select(GEOID) %>% unique()
+wheat_counties <- soy_data %>% select(GEOID) %>% unique()
+```
+
+#Adding a corn, soy, and wheat colums to help distinguish the yield data, selecting GEOID
+```{r}
+corn_counties <- corn_data %>% select(GEOID) %>% unique() %>% mutate(corn = 'corn')
+
+soy_counties <- soy_data %>% select(GEOID) %>% unique() %>% mutate(soy = 'soy')
+
+wheat_counties <- wheat_data %>% select(GEOID) %>% unique() %>% mutate(wheat = 'wheat')
+
+corn_soy_counties <- full_join(corn_counties, soy_counties, by="GEOID")
+
+```
+`
+#Adding a corn, soy, and wheat colums to help distinguish the yield data, selecting GEOID and year
+```{r}
+corn_data_2 <- corn_data %>% select(c("GEOID", "year"))%>% mutate(corn = 'corn')
+
+soy_data_2 <- soy_data %>% select(c("GEOID", "year")) %>% mutate(soy = 'soy')
+
+wheat_data_2 <- wheat_data %>% select(c("GEOID", "year")) %>% mutate(wheat = 'wheat')
+
+```
+
+#Adding a corn, soy, and wheat colums to help distinguish the yield data, selecting GEOID and year, state-alpha, county_name, and irrigation status. This is the one we use 
+```{r}
+corn_data_3 <- corn_data %>% select(c("GEOID", "year", "state_alpha", "county_name", "Yield_mg_ha",  "irrigated"))%>% mutate(corn = 'corn')
+
+soy_data_3 <- soy_data %>% select(c("GEOID", "year", "state_alpha", "county_name", "Yield_mg_ha", "irrigated")) %>% mutate(soy = 'soy')
+
+wheat_data_3 <- wheat_data %>% select(c("GEOID", "year", "state_alpha", "county_name", "Yield_mg_ha", "irrigated")) %>% mutate(wheat = 'wheat')
+
+corn_soy_data3 <- full_join(corn_data_3, soy_data_3, by= c("GEOID", "year", "state_alpha", "county_name", "irrigated"))
+
+all_data3 <- full_join(corn_soy_data3, wheat_data_3, by= c("GEOID", "year", "state_alpha", "county_name", "irrigated"))
+head(all_data3)
+```
+
+#Checking for the presence of wheat. It all checks out. 
+```{r}
+wheat <- subset(all_data3, wheat=="wheat")
+```
+
+#Save file as a .csv  to be uploaded in GIS 
+```{r}
+write.csv(all_data3, 'data/AFT-data/corn_soy_wheat.csv')
+```
+
