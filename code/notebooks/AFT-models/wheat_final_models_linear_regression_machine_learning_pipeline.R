@@ -28,7 +28,7 @@ library(ggpmisc)
 #' 
 ## ----data------------------------------------------------------------------------------------------------------------------------------------------
 
-comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum <- read.csv('data/AFT-results/Comet-som-county-max-sum.csv')
 comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
 
 all_data <- readRDS('data/AFT-data/wheat_all_data_n15_om10_AFT.rds')
@@ -43,9 +43,9 @@ rainfed <- all_data %>%
 # create a list of state (/group of state) names
 
 state_id <- list(
-  all = c("AR", "CO", "GA", "ID", "IL", "IN", "KS", "KY", "MD", "MI", "MO", "MS", "MT", "NC", "ND", "NE", "NJ", "NY", "OH", "OK", "OR", "PA", "SC", "SD", "TN", "TX", "VA", "WA", "WI", "WV"),
-  group_23 = c("AR", "CO", "GA", "ID", "KS", "KY", "MD", "MI", "MO", "MS", "MT", "NC", "ND", "NE", "NJ", "NY", "OK", "OR", "PA", "SC", "SD", "TN", "TX", "VA", "WA", "WI", "WV"),
-  IL_IN_OH = c('IL','IN','OH')
+  all = c("AR", "CO", "GA", "ID", "IL", "IN", "KS", "KY", "MD", "MI", "MO", "MS", "MT", "NC", "ND", "NE", "NJ", "NY", "OH", "OK", "OR", "PA", "SC", "SD", "TN", "TX", "VA", "WA", "WI", "WV")
+  #group_23 = c("AR", "CO", "GA", "ID", "KS", "KY", "MD", "MI", "MO", "MS", "MT", "NC", "ND", "NE", "NJ", "NY", "OK", "OR", "PA", "SC", "SD", "TN", "TX", "VA", "WA", "WI", "WV"),
+  #IL_IN_OH = c('IL','IN','OH')
 )
 
 
@@ -536,18 +536,47 @@ for (i in names(state_id)) {
   max_om <- round(max(test_data$ssurgo_om_mean), digits = 2) #5.89
   
   library(purrr)
-  all_om_test <- test_data %>%
+  all_om_test.1 <- test_data %>%
     left_join(comet_sum, by = 'GEOID') %>%
+    filter(ssurgo_om_mean < 1.3) %>%
     group_by(GEOID, state_alpha) %>%
     nest() %>%
-    mutate(grid = map(data, ~c(seq(from = 0.37, to = .$ssurgo_om_mean, 0.2), 
-                               seq(from=.$ssurgo_om_mean, to = .$ssurgo_om_mean+.$total_SOM10, 0.01),
-                               seq(from=.$ssurgo_om_mean+.$total_SOM10, to =7, 0.5)))) %>%
+    mutate(grid = map(data, ~c(seq(from = 0.3, to = .$ssurgo_om_mean+.$total_SOM10 + 1, 0.01),
+                               seq(from=.$ssurgo_om_mean+.$total_SOM10 +1, to =7, 0.5)))) %>%
     unnest(cols = grid) %>%
     select(-data)  %>%
     left_join(test_data, by = c('GEOID','state_alpha')) %>%
     rename(ssurgo_om_county_mean = ssurgo_om_mean,
            ssurgo_om_mean = grid) # rename the grid column to ssurgo_om_mean to be used in prediction
+  
+  all_om_test.2 <- test_data %>%
+    left_join(comet_sum, by = 'GEOID') %>%
+    filter(ssurgo_om_mean > 5) %>%
+    group_by(GEOID, state_alpha) %>%
+    nest() %>%
+    mutate(grid = map(data, ~c(seq(from = 0.3, to = .$ssurgo_om_mean -1, 0.2),
+                               seq(from=.$ssurgo_om_mean -1, to = .$ssurgo_om_mean+.$total_SOM10 + 1, 0.01)))) %>%
+    unnest(cols = grid) %>%
+    select(-data)  %>%
+    left_join(test_data, by = c('GEOID','state_alpha')) %>%
+    rename(ssurgo_om_county_mean = ssurgo_om_mean,
+           ssurgo_om_mean = grid)
+  
+  all_om_test.3 <- test_data %>%
+    left_join(comet_sum, by = 'GEOID') %>%
+    filter(ssurgo_om_mean >= 1.3 & ssurgo_om_mean <= 5 ) %>%
+    group_by(GEOID, state_alpha) %>%
+    nest() %>%
+    mutate(grid = map(data, ~c(seq(from = 0.3, to = .$ssurgo_om_mean -1, 0.2),
+                               seq(from=.$ssurgo_om_mean -1, to = .$ssurgo_om_mean+.$total_SOM10 + 1, 0.01),
+                               seq(from=.$ssurgo_om_mean+.$total_SOM10 +1, to =7, 0.5)))) %>%
+    unnest(cols = grid) %>%
+    select(-data)  %>%
+    left_join(test_data, by = c('GEOID','state_alpha')) %>%
+    rename(ssurgo_om_county_mean = ssurgo_om_mean,
+           ssurgo_om_mean = grid)
+  
+  all_om_test <- bind_rows(all_om_test.1,all_om_test.2,all_om_test.3)
   
   pred_rf_om_grid <- predict(model_final, all_om_test) %>% rename(pred_yield = .pred)
   

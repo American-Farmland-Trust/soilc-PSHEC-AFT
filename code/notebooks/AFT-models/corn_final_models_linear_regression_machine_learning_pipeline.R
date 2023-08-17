@@ -28,7 +28,7 @@ library(ggpmisc)
 #' 
 ## ----data------------------------------------------------------------------------------------------------------------------------------------------
 
-comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum <- read.csv('data/AFT-results/Comet-som-county-max-sum.csv')
 comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
 
 all_data <- readRDS('data/AFT-data/corn_all_data_n15_om10_AFT.rds')
@@ -410,6 +410,8 @@ if (i == 'all') {
     extract_workflow(best_wf_name) %>% 
     finalize_workflow(best_results) 
   
+  saveRDS(final_wf, file = paste0('data/soil/Model_selection/corn/', i , '_final_model.rds'))
+  
   model_final <- fit(final_wf, data)
   
   saveRDS(model_final, file = paste0('data/soil/Model_selection/corn/', i , '_final_model.rds'))
@@ -544,18 +546,47 @@ if (i == 'all') {
   max_om <- round(max(test_data$ssurgo_om_mean), digits = 2) #5.89
 
 library(purrr)
-  all_om_test <- test_data %>%
+  all_om_test.1 <- test_data %>%
     left_join(comet_sum, by = 'GEOID') %>%
+    filter(ssurgo_om_mean < 1.3) %>%
     group_by(GEOID, state_alpha) %>%
     nest() %>%
-    mutate(grid = map(data, ~c(seq(from = 0.37, to = .$ssurgo_om_mean, 0.2), 
-                               seq(from=.$ssurgo_om_mean, to = .$ssurgo_om_mean+.$total_SOM10, 0.01),
-                               seq(from=.$ssurgo_om_mean+.$total_SOM10, to =7, 0.5)))) %>%
+    mutate(grid = map(data, ~c(seq(from = 0.3, to = .$ssurgo_om_mean+.$total_SOM10 + 1, 0.01),
+                               seq(from=.$ssurgo_om_mean+.$total_SOM10 +1, to =7, 0.5)))) %>%
     unnest(cols = grid) %>%
     select(-data)  %>%
     left_join(test_data, by = c('GEOID','state_alpha')) %>%
     rename(ssurgo_om_county_mean = ssurgo_om_mean,
            ssurgo_om_mean = grid) # rename the grid column to ssurgo_om_mean to be used in prediction
+  
+  all_om_test.2 <- test_data %>%
+    left_join(comet_sum, by = 'GEOID') %>%
+    filter(ssurgo_om_mean > 5) %>%
+    group_by(GEOID, state_alpha) %>%
+    nest() %>%
+    mutate(grid = map(data, ~c(seq(from = 0.3, to = .$ssurgo_om_mean -1, 0.2),
+                               seq(from=.$ssurgo_om_mean -1, to = .$ssurgo_om_mean+.$total_SOM10 + 1, 0.01)))) %>%
+    unnest(cols = grid) %>%
+    select(-data)  %>%
+    left_join(test_data, by = c('GEOID','state_alpha')) %>%
+    rename(ssurgo_om_county_mean = ssurgo_om_mean,
+           ssurgo_om_mean = grid)
+  
+  all_om_test.3 <- test_data %>%
+    left_join(comet_sum, by = 'GEOID') %>%
+    filter(ssurgo_om_mean >= 1.3 & ssurgo_om_mean <= 5 ) %>%
+    group_by(GEOID, state_alpha) %>%
+    nest() %>%
+    mutate(grid = map(data, ~c(seq(from = 0.3, to = .$ssurgo_om_mean -1, 0.2),
+                               seq(from=.$ssurgo_om_mean -1, to = .$ssurgo_om_mean+.$total_SOM10 + 1, 0.01),
+                               seq(from=.$ssurgo_om_mean+.$total_SOM10 +1, to =7, 0.5)))) %>%
+    unnest(cols = grid) %>%
+    select(-data)  %>%
+    left_join(test_data, by = c('GEOID','state_alpha')) %>%
+    rename(ssurgo_om_county_mean = ssurgo_om_mean,
+           ssurgo_om_mean = grid)
+  
+  all_om_test <- bind_rows(all_om_test.1,all_om_test.2,all_om_test.3)
   
   pred_rf_om_grid <- predict(model_final, all_om_test) %>% rename(pred_yield = .pred)
   
@@ -591,33 +622,33 @@ library(workboots)
     rename(boot_pred = .pred, pred_lower = .pred_lower, pred_upper = .pred_upper)
   
   all_om_test_pred_int <- bind_cols(all_om_test, pred_rf_om_grid, pred_int_final_wf_om_grid)  %>%
-    select(GEOID,ssurgo_om_mean,ssurgo_om_county_mean, pred_yield,boot_pred, pred_lower, pred_upper) %>%
+    select(GEOID,ssurgo_om_mean,ssurgo_om_county_mean, pred_yield, pred_lower, pred_upper) %>%
     left_join(meta_data, by = c('GEOID','state_alpha'))
   
   write.csv(all_om_test_pred_int, file = paste0('data/soil/Coefficients/corn/', i , '_ML_model_OM_range_yield_predictions_intervals.csv'))
   
   # generate predictions from 2000 bootstrap models
-  set.seed(345)
-  conf_int_final_wf <-
-    final_wf %>%
-    predict_boots(
-      n = 2000,
-      training_data = corn_train,
-      new_data = all_om_test,
-      interval = 'confidence'
-    )
+  #set.seed(345)
+  #conf_int_final_wf <-
+  #  final_wf %>%
+  #  predict_boots(
+  #    n = 2000,
+  #    training_data = corn_train,
+  #    new_data = all_om_test,
+  #    interval = 'confidence'
+  #  )
   
   # summarise predictions with a 95% confidence interval
-  conf_int_final_wf_om_grid <- conf_int_final_wf %>%
-    summarise_predictions() %>%
-    select( .pred, .pred_lower, .pred_upper) %>%
-    rename(boot_pred = .pred, conf_lower = .pred_lower, conf_upper = .pred_upper)
+  #conf_int_final_wf_om_grid <- conf_int_final_wf %>%
+  #  summarise_predictions() %>%
+  #  select( .pred, .pred_lower, .pred_upper) %>%
+  #  rename(boot_pred = .pred, conf_lower = .pred_lower, conf_upper = .pred_upper)
   
-  all_om_test_conf_int <- bind_cols(all_om_test, pred_rf_om_grid, conf_int_final_wf_om_grid)  %>%
-    select(GEOID,ssurgo_om_mean,ssurgo_om_county_mean, pred_yield,boot_pred, conf_lower, conf_upper) %>%
-    left_join(meta_data, by = c('GEOID','state_alpha'))
+  #all_om_test_conf_int <- bind_cols(all_om_test, pred_rf_om_grid, conf_int_final_wf_om_grid)  %>%
+  #  select(GEOID,ssurgo_om_mean,ssurgo_om_county_mean, pred_yield,boot_pred, conf_lower, conf_upper) %>%
+  #  left_join(meta_data, by = c('GEOID','state_alpha'))
   
-  write.csv(all_om_test_conf_int, file = paste0('data/soil/Coefficients/corn/', i , '_ML_model_OM_range_yield_confidence_intervals.csv'))
+  #write.csv(all_om_test_conf_int, file = paste0('data/soil/Coefficients/corn/', i , '_ML_model_OM_range_yield_confidence_intervals.csv'))
   
   gc()
   
