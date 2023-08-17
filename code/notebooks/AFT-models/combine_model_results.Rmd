@@ -55,13 +55,13 @@ hist(comet_sum$total_SOM10)
 corn 
 ```{r data}
 # comet sum data
-comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum <- read.csv('data/AFT-results/Comet-som-county-max-sum.csv')
 comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
 
 # ML predictions
-group_23_ML <- read.csv('data/soil/Coefficients/corn/group_23_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+group_23_ML <- read.csv('data/soil/Coefficients/corn/group_23_ML_model_OM_range_yield_predictions_intervals_update.csv', row.names = 'X')
 
-I_ML <- read.csv('data/soil/Coefficients/corn/IA_IL_IN_OH_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+I_ML <- read.csv('data/soil/Coefficients/corn/IA_IL_IN_OH_ML_model_OM_range_yield_predictions_intervals_update.csv', row.names = 'X')
 
 all_ML <- bind_rows(group_23_ML,I_ML)
 
@@ -73,7 +73,7 @@ ML_results <- all_ML %>%
   #inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
   left_join(comet_sum, by = 'GEOID') 
   
-write.csv(ML_results, file = 'data/soil/Comet_data/corn_all_yield_predictions_intervals_machine_learning_model.csv')
+write.csv(ML_results, file = 'data/AFT-results/corn_all_yield_predictions_intervals_machine_learning_model_update.csv')
 
 # plot
 ggplot(all_ML) +
@@ -97,13 +97,13 @@ Soy
 
 ```{r data}
 # comet sum data
-comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum <- read.csv('data/AFT-results/Comet-som-county-max-sum.csv')
 comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
 
 # ML predictions
-group_soy_ML <- read.csv('data/soil/Coefficients/soy/group_23_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+group_soy_ML <- read.csv('data/soil/Coefficients/soy/group_23_ML_model_OM_range_yield_predictions_intervals_update.csv', row.names = 'X')
 
-I_soy_ML <- read.csv('data/soil/Coefficients/soy/IA_IL_IN_OH_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+I_soy_ML <- read.csv('data/soil/Coefficients/soy/IA_IL_IN_OH_ML_model_OM_range_yield_predictions_intervals_update.csv', row.names = 'X')
 
 all_soy_ML <- bind_rows(group_soy_ML,I_soy_ML)
 
@@ -115,7 +115,7 @@ ML_soy_results <- all_soy_ML %>%
   #inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
   left_join(comet_sum, by = 'GEOID') 
   
-write.csv(ML_soy_results, file = 'data/soil/Comet_data/soy_all_yield_predictions_intervals_machine_learning_model.csv')
+write.csv(ML_soy_results, file = 'data/AFT-results/soy_all_yield_predictions_intervals_machine_learning_model_update.csv')
 
 # plot
 ggplot(all_soy) +
@@ -130,11 +130,11 @@ Wheat
 
 ```{r wheat}
 # comet sum data
-comet_sum <- read.csv('data/soil/Comet_data/Comet-som-county-max-sum.csv')
+comet_sum <- read.csv('data/AFT-results/Comet-som-county-max-sum.csv')
 comet_sum$GEOID <- formatC(comet_sum$GEOID, width = 5, format = 'd' ,flag = '0')
 
 # ML predictions
-all_wheat_ML <- read.csv('data/soil/Coefficients/wheat/all_ML_model_OM_range_yield_predictions_intervals.csv', row.names = 'X')
+all_wheat_ML <- read.csv('data/soil/Coefficients/wheat/all_ML_model_OM_range_yield_predictions_intervals_update.csv', row.names = 'X')
 
 all_wheat_ML$GEOID <- formatC(all_wheat_ML$GEOID, width = 5, format = 'd' ,flag = '0')
 
@@ -144,7 +144,7 @@ ML_wheat_results <- all_wheat_ML %>%
   #inner_join(all_lm, by = c('state_alpha','ssurgo_om_mean', 'GEOID', 'county_name','ssurgo_om_county_mean')) %>%
   left_join(comet_sum, by = 'GEOID') 
   
-write.csv(ML_wheat_results, file = 'data/soil/Comet_data/wheat_all_yield_predictions_intervals_machine_learning_model.csv')
+write.csv(ML_wheat_results, file = 'data/AFT-results/wheat_all_yield_predictions_intervals_machine_learning_model_update.csv')
 
 
 ```
