@@ -3,6 +3,8 @@ title: "Untitled"
 author: "ATR"
 date: "2023-08-01"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
@@ -90,3 +92,26 @@ wheat <- subset(all_data3, wheat=="wheat")
 write.csv(all_data3, 'data/AFT-data/corn_soy_wheat.csv')
 ```
 
+#ML: combine soil organic data for corn, soybean, and wheat counties
+
+```{r combine}
+corn_rainfed <- corn_data %>% 
+  filter(irrigated == 'rainfed') %>%
+  select(GEOID, state_alpha,state_ansi,county_ansi,county_name,ssurgo_om_mean) %>%
+  unique() 
+
+soy_rainfed <- soy_data %>% 
+  filter(irrigated == 'rainfed') %>%
+  select(GEOID, state_alpha,state_ansi,county_ansi,county_name,ssurgo_om_mean) %>%
+  unique() 
+
+wheat_rainfed <- wheat_data %>%
+  filter(irrigated == 'rainfed') %>%
+  select(GEOID, state_alpha,state_ansi,county_ansi,county_name,ssurgo_om_mean) %>%
+  unique()
+
+som_summary <- bind_rows(corn = corn_rainfed, soybean = soy_rainfed, wheat = wheat_rainfed, .id = 'crop')
+
+write.csv(som_summary, file = 'data/AFT-data/corn_soy_wheat_county_mean_SOM.csv')
+
+```
