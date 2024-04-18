@@ -1,0 +1,841 @@
+Date,Treatment,Treatment_Type,Replicate,Crop,crop_only_yield_bu_A,crop_only_yield_kg_ha,whole_plot_yield_bu_A,whole_plot_yield_kg_ha,Year
+11/20/2023,T4,Organic with CC,R1,Zea mays L. (*),65.7,4121.3,62.415,3915.235,2023
+11/20/2023,T4,Organic with CC,R6,Zea mays L. (*),48.8,3062.4,46.36,2909.28,2023
+11/20/2023,T4,Organic with CC,R5,Zea mays L. (*),57,3573.9,54.15,3395.205,2023
+11/20/2023,T4,Organic with CC,R4,Zea mays L. (*),55.3,3468.1,52.535,3294.695,2023
+11/20/2023,T4,Organic with CC,R3,Zea mays L. (*),72.1,4523.1,68.495,4296.945,2023
+11/20/2023,T4,Organic with CC,R2,Zea mays L. (*),59.3,3723.4,56.335,3537.23,2023
+11/10/2023,T3,Reduced input with CC,R3,Zea mays L. (*),168.7,10582.1,160.265,10052.995,2023
+11/10/2023,T3,Reduced input with CC,R6,Zea mays L. (*),172.2,10806.8,163.59,10266.46,2023
+11/10/2023,T3,Reduced input with CC,R5,Zea mays L. (*),164.2,10301.2,155.99,9786.14,2023
+11/10/2023,T3,Reduced input with CC,R4,Zea mays L. (*),169.6,10637.7,161.12,10105.815,2023
+11/10/2023,T3,Reduced input with CC,R2,Zea mays L. (*),178.2,11181.6,169.29,10622.52,2023
+11/9/2023,T1,Conventional,R2,Zea mays L. (*),184.1,11547.5,184.1,11547.5,2023
+11/9/2023,T1,Conventional,R6,Zea mays L. (*),184,11546.1,184,11546.1,2023
+11/9/2023,T1,Conventional,R5,Zea mays L. (*),167.7,10523.7,167.7,10523.7,2023
+11/9/2023,T1,Conventional,R4,Zea mays L. (*),172.7,10834.3,172.7,10834.3,2023
+11/9/2023,T1,Conventional,R3,Zea mays L. (*),189.5,11888.1,189.5,11888.1,2023
+11/9/2023,T1,Conventional,R1,Zea mays L. (*),156.2,9799.5,156.2,9799.5,2023
+11/9/2023,T3,Reduced input with CC,R1,Zea mays L. (*),163.3,10246.3,155.135,9733.985,2023
+11/8/2023,T2,No-Till,R5,Zea mays L. (*),186.1,11677,186.1,11677,2023
+11/8/2023,T2,No-Till,R4,Zea mays L. (*),198.2,12437,198.2,12437,2023
+11/7/2023,T2,No-Till,R6,Zea mays L. (*),187,11729.5,187,11729.5,2023
+11/7/2023,T2,No-Till,R3,Zea mays L. (*),196.1,12302.9,196.1,12302.9,2023
+11/7/2023,T2,No-Till,R2,Zea mays L. (*),184.6,11583.9,184.6,11583.9,2023
+11/7/2023,T2,No-Till,R1,Zea mays L. (*),189.9,11911.7,189.9,11911.7,2023
+7/21/2022,T3,Reduced input with CC,R2,Triticum aestivum L. (*),63.4,4263.6,60.23,4050.42,2022
+7/21/2022,T3,Reduced input with CC,R5,Triticum aestivum L. (*),60,4036.6,57,3834.77,2022
+7/21/2022,T3,Reduced input with CC,R4,Triticum aestivum L. (*),62.2,4179.7,59.09,3970.715,2022
+7/21/2022,T4,Organic with CC,R6,Triticum aestivum L. (*),22.4,1505.3,21.28,1430.035,2022
+7/21/2022,T4,Organic with CC,R5,Triticum aestivum L. (*),25.3,1702.1,24.035,1616.995,2022
+7/21/2022,T4,Organic with CC,R4,Triticum aestivum L. (*),25.4,1708.2,24.13,1622.79,2022
+7/21/2022,T4,Organic with CC,R3,Triticum aestivum L. (*),26.9,1810,25.555,1719.5,2022
+7/21/2022,T4,Organic with CC,R2,Triticum aestivum L. (*),27.6,1855.3,26.22,1762.535,2022
+7/21/2022,T4,Organic with CC,R1,Triticum aestivum L. (*),26.5,1781,25.175,1691.95,2022
+7/20/2022,T1,Conventional,R4,Triticum aestivum L. (*),71.4,4799.6,71.4,4799.6,2022
+7/20/2022,T1,Conventional,R2,Triticum aestivum L. (*),80.5,5409.7,80.5,5409.7,2022
+7/20/2022,T1,Conventional,R3,Triticum aestivum L. (*),88,5916.6,88,5916.6,2022
+7/20/2022,T2,No-Till,R6,Triticum aestivum L. (*),84.6,5689.8,84.6,5689.8,2022
+7/20/2022,T2,No-Till,R4,Triticum aestivum L. (*),79.2,5323.1,79.2,5323.1,2022
+7/20/2022,T2,No-Till,R1,Triticum aestivum L. (*),78.9,5304.7,78.9,5304.7,2022
+7/20/2022,T3,Reduced input with CC,R6,Triticum aestivum L. (*),56.5,3795.3,53.675,3605.535,2022
+7/20/2022,T3,Reduced input with CC,R3,Triticum aestivum L. (*),60.3,4053.7,57.285,3851.015,2022
+7/20/2022,T3,Reduced input with CC,R1,Triticum aestivum L. (*),60.1,4042.6,57.095,3840.47,2022
+7/19/2022,T1,Conventional,R1,Triticum aestivum L. (*),71.3,4793.5,71.3,4793.5,2022
+7/19/2022,T1,Conventional,R6,Triticum aestivum L. (*),71.2,4784.2,71.2,4784.2,2022
+7/19/2022,T1,Conventional,R5,Triticum aestivum L. (*),74.9,5036.2,74.9,5036.2,2022
+7/19/2022,T2,No-Till,R5,Triticum aestivum L. (*),82.4,5536.9,82.4,5536.9,2022
+7/19/2022,T2,No-Till,R3,Triticum aestivum L. (*),78.4,5268.8,78.4,5268.8,2022
+7/19/2022,T2,No-Till,R2,Triticum aestivum L. (*),83.3,5602.5,83.3,5602.5,2022
+10/20/2021,T4,Organic with CC,R5,Glycine max L. (*),29.2,1964.4,27.74,1866.18,2021
+10/20/2021,T4,Organic with CC,R4,Glycine max L. (*),36.1,2423.8,34.295,2302.61,2021
+10/20/2021,T4,Organic with CC,R3,Glycine max L. (*),32,2154.4,30.4,2046.68,2021
+10/20/2021,T4,Organic with CC,R1,Glycine max L. (*),30.8,2069.1,29.26,1965.645,2021
+10/20/2021,T4,Organic with CC,R6,Glycine max L. (*),21.1,1417.8,20.045,1346.91,2021
+10/19/2021,T3,Reduced input with CC,R3,Glycine max L. (*),63.1,4244.2,59.945,4031.99,2021
+10/19/2021,T3,Reduced input with CC,R1,Glycine max L. (*),63,4233,59.85,4021.35,2021
+10/19/2021,T3,Reduced input with CC,R2,Glycine max L. (*),66.8,4488.8,63.46,4264.36,2021
+10/19/2021,T3,Reduced input with CC,R6,Glycine max L. (*),60.5,4064,57.475,3860.8,2021
+10/19/2021,T3,Reduced input with CC,R5,Glycine max L. (*),56,3763.6,53.2,3575.42,2021
+10/19/2021,T3,Reduced input with CC,R4,Glycine max L. (*),56.1,3772.8,53.295,3584.16,2021
+10/19/2021,T4,Organic with CC,R2,Glycine max L. (*),29.8,2001.7,28.31,1901.615,2021
+9/30/2021,T1,Conventional,R2,Glycine max L. (*),67.9,4564,67.9,4564,2021
+9/30/2021,T1,Conventional,R5,Glycine max L. (*),65.3,4389.2,65.3,4389.2,2021
+9/30/2021,T1,Conventional,R4,Glycine max L. (*),67.5,4537.9,67.5,4537.9,2021
+9/30/2021,T1,Conventional,R3,Glycine max L. (*),57.1,3836.6,57.1,3836.6,2021
+9/30/2021,T1,Conventional,R1,Glycine max L. (*),58.2,3910,58.2,3910,2021
+9/30/2021,T2,No-Till,R6,Glycine max L. (*),59.2,3980.2,59.2,3980.2,2021
+9/30/2021,T2,No-Till,R5,Glycine max L. (*),64.3,4319.2,64.3,4319.2,2021
+9/30/2021,T2,No-Till,R4,Glycine max L. (*),63.4,4263.4,63.4,4263.4,2021
+9/30/2021,T2,No-Till,R3,Glycine max L. (*),64.4,4328.9,64.4,4328.9,2021
+9/30/2021,T2,No-Till,R2,Glycine max L. (*),60.4,4062.5,60.4,4062.5,2021
+9/30/2021,T2,No-Till,R1,Glycine max L. (*),61.4,4126.7,61.4,4126.7,2021
+9/29/2021,T1,Conventional,R6,Glycine max L. (*),61.3,4117.7,61.3,4117.7,2021
+10/31/2020,T2,No-Till,R4,Zea mays L. (*),168.3,10557.2,168.3,10557.2,2020
+10/31/2020,T3,Reduced input with CC,R6,Zea mays L. (*),114.8,7204.4,109.06,6844.18,2020
+10/31/2020,T3,Reduced input with CC,R3,Zea mays L. (*),131.6,8257.1,125.02,7844.245,2020
+10/31/2020,T4,Organic with CC,R6,Zea mays L. (*),77.3,4850,73.435,4607.5,2020
+10/31/2020,T4,Organic with CC,R5,Zea mays L. (*),106.8,6699.2,101.46,6364.24,2020
+10/31/2020,T4,Organic with CC,R4,Zea mays L. (*),116,7279,110.2,6915.05,2020
+10/31/2020,T4,Organic with CC,R3,Zea mays L. (*),120.5,7562,114.475,7183.9,2020
+10/31/2020,T4,Organic with CC,R2,Zea mays L. (*),110.5,6930.9,104.975,6584.355,2020
+10/31/2020,T4,Organic with CC,R1,Zea mays L. (*),110.8,6950.3,105.26,6602.785,2020
+10/30/2020,T1,Conventional,R3,Zea mays L. (*),128.5,8062,128.5,8062,2020
+10/30/2020,T1,Conventional,R5,Zea mays L. (*),94.2,5908.2,94.2,5908.2,2020
+10/30/2020,T1,Conventional,R4,Zea mays L. (*),98.3,6167.8,98.3,6167.8,2020
+10/30/2020,T1,Conventional,R2,Zea mays L. (*),118.2,7418.2,118.2,7418.2,2020
+10/30/2020,T2,No-Till,R5,Zea mays L. (*),162.2,10173.7,162.2,10173.7,2020
+10/30/2020,T2,No-Till,R3,Zea mays L. (*),183,11479.3,183,11479.3,2020
+10/30/2020,T2,No-Till,R2,Zea mays L. (*),156.1,9793.4,156.1,9793.4,2020
+10/30/2020,T3,Reduced input with CC,R5,Zea mays L. (*),134,8404.1,127.3,7983.895,2020
+10/30/2020,T3,Reduced input with CC,R4,Zea mays L. (*),145.5,9126.5,138.225,8670.175,2020
+10/29/2020,T1,Conventional,R6,Zea mays L. (*),123.2,7727.3,123.2,7727.3,2020
+10/29/2020,T1,Conventional,R1,Zea mays L. (*),70.4,4417.5,70.4,4417.5,2020
+10/29/2020,T2,No-Till,R6,Zea mays L. (*),157.8,9901.8,157.8,9901.8,2020
+10/29/2020,T2,No-Till,R1,Zea mays L. (*),157.1,9854,157.1,9854,2020
+10/29/2020,T3,Reduced input with CC,R2,Zea mays L. (*),157.6,9885.9,149.72,9391.605,2020
+10/29/2020,T3,Reduced input with CC,R1,Zea mays L. (*),128.1,8036,121.695,7634.2,2020
+7/25/2019,T3,Reduced input with CC,R6,Triticum aestivum L. (*),67.9,4565.4,64.505,4337.13,2019
+7/25/2019,T3,Reduced input with CC,R5,Triticum aestivum L. (*),73.6,4944.5,69.92,4697.275,2019
+7/25/2019,T3,Reduced input with CC,R4,Triticum aestivum L. (*),74.8,5029.3,71.06,4777.835,2019
+7/25/2019,T3,Reduced input with CC,R3,Triticum aestivum L. (*),71.2,4786.1,67.64,4546.795,2019
+7/25/2019,T3,Reduced input with CC,R2,Triticum aestivum L. (*),72.9,4903.7,69.255,4658.515,2019
+7/25/2019,T3,Reduced input with CC,R1,Triticum aestivum L. (*),69.2,4652,65.74,4419.4,2019
+7/25/2019,T4,Organic with CC,R3,Triticum aestivum L. (*),33.3,2237.6,31.635,2125.72,2019
+7/25/2019,T4,Organic with CC,R6,Triticum aestivum L. (*),28.8,1933.2,27.36,1836.54,2019
+7/25/2019,T4,Organic with CC,R5,Triticum aestivum L. (*),31.3,2102.7,29.735,1997.565,2019
+7/25/2019,T4,Organic with CC,R4,Triticum aestivum L. (*),31.6,2123.4,30.02,2017.23,2019
+7/25/2019,T4,Organic with CC,R2,Triticum aestivum L. (*),33,2217.1,31.35,2106.245,2019
+7/25/2019,T4,Organic with CC,R1,Triticum aestivum L. (*),29.7,1998.5,28.215,1898.575,2019
+7/24/2019,T1,Conventional,R1,Triticum aestivum L. (*),78.5,5277.2,78.5,5277.2,2019
+7/24/2019,T1,Conventional,R6,Triticum aestivum L. (*),81.5,5481.7,81.5,5481.7,2019
+7/24/2019,T1,Conventional,R5,Triticum aestivum L. (*),85.3,5731.5,85.3,5731.5,2019
+7/24/2019,T1,Conventional,R4,Triticum aestivum L. (*),84.2,5658.5,84.2,5658.5,2019
+7/24/2019,T1,Conventional,R3,Triticum aestivum L. (*),83.2,5591.4,83.2,5591.4,2019
+7/24/2019,T1,Conventional,R2,Triticum aestivum L. (*),85.8,5764.6,85.8,5764.6,2019
+7/24/2019,T2,No-Till,R6,Triticum aestivum L. (*),81.4,5472.9,81.4,5472.9,2019
+7/24/2019,T2,No-Till,R5,Triticum aestivum L. (*),75.6,5082.6,75.6,5082.6,2019
+7/24/2019,T2,No-Till,R4,Triticum aestivum L. (*),76.1,5115.1,76.1,5115.1,2019
+7/24/2019,T2,No-Till,R3,Triticum aestivum L. (*),76.7,5152.9,76.7,5152.9,2019
+7/24/2019,T2,No-Till,R2,Triticum aestivum L. (*),75.5,5077.3,75.5,5077.3,2019
+7/24/2019,T2,No-Till,R1,Triticum aestivum L. (*),78.1,5249,78.1,5249,2019
+10/18/2018,T4,Organic with CC,R2,Glycine max L. (*),52,3497.3,52,3497.3,2018
+10/18/2018,T4,Organic with CC,R6,Glycine max L. (*),41.9,2819.5,41.9,2819.5,2018
+10/18/2018,T4,Organic with CC,R5,Glycine max L. (*),42.1,2831,42.1,2831,2018
+10/18/2018,T4,Organic with CC,R4,Glycine max L. (*),55.3,3714.2,55.3,3714.2,2018
+10/18/2018,T4,Organic with CC,R3,Glycine max L. (*),53.2,3573.2,53.2,3573.2,2018
+10/18/2018,T4,Organic with CC,R1,Glycine max L. (*),51.4,3456.5,51.4,3456.5,2018
+10/16/2018,T1,Conventional,R6,Glycine max L. (*),46.6,3133,46.6,3133,2018
+10/16/2018,T3,Reduced input with CC,R6,Glycine max L. (*),55.8,3752.8,55.8,3752.8,2018
+10/16/2018,T3,Reduced input with CC,R5,Glycine max L. (*),51.4,3458.2,51.4,3458.2,2018
+10/10/2018,T1,Conventional,R5,Glycine max L. (*),39.2,2633.6,39.2,2633.6,2018
+10/9/2018,T1,Conventional,R2,Glycine max L. (*),53.5,3595.4,53.5,3595.4,2018
+10/9/2018,T1,Conventional,R4,Glycine max L. (*),46.2,3107.1,46.2,3107.1,2018
+10/9/2018,T1,Conventional,R3,Glycine max L. (*),52.9,3559.3,52.9,3559.3,2018
+10/9/2018,T1,Conventional,R1,Glycine max L. (*),38.4,2579,38.4,2579,2018
+10/9/2018,T2,No-Till,R6,Glycine max L. (*),53,3563.9,53,3563.9,2018
+10/9/2018,T2,No-Till,R5,Glycine max L. (*),51,3426.1,51,3426.1,2018
+10/9/2018,T2,No-Till,R4,Glycine max L. (*),55.4,3727.4,55.4,3727.4,2018
+10/9/2018,T2,No-Till,R3,Glycine max L. (*),56.9,3826.2,56.9,3826.2,2018
+10/9/2018,T2,No-Till,R2,Glycine max L. (*),49.9,3351.8,49.9,3351.8,2018
+10/9/2018,T2,No-Till,R1,Glycine max L. (*),54.1,3638.6,54.1,3638.6,2018
+10/9/2018,T3,Reduced input with CC,R4,Glycine max L. (*),52.8,3547.5,52.8,3547.5,2018
+10/9/2018,T3,Reduced input with CC,R3,Glycine max L. (*),50.9,3424.1,50.9,3424.1,2018
+10/9/2018,T3,Reduced input with CC,R2,Glycine max L. (*),58.3,3917,58.3,3917,2018
+10/9/2018,T3,Reduced input with CC,R1,Glycine max L. (*),53.6,3604.3,53.6,3604.3,2018
+10/19/2017,T1,Conventional,R6,Zea mays L. (*),124.1,7789,124.1,7789,2017
+10/19/2017,T1,Conventional,R5,Zea mays L. (*),128.9,8089.4,128.9,8089.4,2017
+10/19/2017,T2,No-Till,R5,Zea mays L. (*),173,10851.3,173,10851.3,2017
+10/19/2017,T2,No-Till,R6,Zea mays L. (*),140.2,8795.1,140.2,8795.1,2017
+10/19/2017,T3,Reduced input with CC,R6,Zea mays L. (*),116.8,7327,116.8,7327,2017
+10/19/2017,T3,Reduced input with CC,R5,Zea mays L. (*),137.2,8610.3,137.2,8610.3,2017
+10/19/2017,T4,Organic with CC,R6,Zea mays L. (*),25.7,1609.5,25.7,1609.5,2017
+10/19/2017,T4,Organic with CC,R5,Zea mays L. (*),39.6,2482.9,39.6,2482.9,2017
+10/19/2017,T4,Organic with CC,R4,Zea mays L. (*),43.3,2718.7,43.3,2718.7,2017
+10/19/2017,T4,Organic with CC,R3,Zea mays L. (*),49.4,3101.2,49.4,3101.2,2017
+10/19/2017,T4,Organic with CC,R2,Zea mays L. (*),48.9,3069.6,48.9,3069.6,2017
+10/19/2017,T4,Organic with CC,R1,Zea mays L. (*),43.4,2722.2,43.4,2722.2,2017
+10/18/2017,T1,Conventional,R1,Zea mays L. (*),112.4,7050.2,112.4,7050.2,2017
+10/18/2017,T1,Conventional,R4,Zea mays L. (*),129.3,8110.2,129.3,8110.2,2017
+10/18/2017,T1,Conventional,R3,Zea mays L. (*),131.1,8225.5,131.1,8225.5,2017
+10/18/2017,T1,Conventional,R2,Zea mays L. (*),135.7,8513.9,135.7,8513.9,2017
+10/18/2017,T2,No-Till,R4,Zea mays L. (*),169,10600.4,169,10600.4,2017
+10/18/2017,T2,No-Till,R3,Zea mays L. (*),164.8,10341.2,164.8,10341.2,2017
+10/18/2017,T2,No-Till,R2,Zea mays L. (*),165.7,10394.3,165.7,10394.3,2017
+10/18/2017,T2,No-Till,R1,Zea mays L. (*),136.7,8578.7,136.7,8578.7,2017
+10/18/2017,T3,Reduced input with CC,R4,Zea mays L. (*),128.9,8089.2,128.9,8089.2,2017
+10/18/2017,T3,Reduced input with CC,R3,Zea mays L. (*),108.8,6829.1,108.8,6829.1,2017
+10/18/2017,T3,Reduced input with CC,R2,Zea mays L. (*),134,8405.6,134,8405.6,2017
+10/18/2017,T3,Reduced input with CC,R1,Zea mays L. (*),109.8,6891.6,109.8,6891.6,2017
+7/19/2016,T3,Reduced input with CC,R5,Triticum aestivum L. (*),74.3,4993.2,74.3,4993.2,2016
+7/19/2016,T3,Reduced input with CC,R4,Triticum aestivum L. (*),78.2,5257.6,78.2,5257.6,2016
+7/15/2016,T3,Reduced input with CC,R3,Triticum aestivum L. (*),77.9,5236,77.9,5236,2016
+7/15/2016,T4,Organic with CC,R2,Triticum aestivum L. (*),39.4,2651.7,39.4,2651.7,2016
+7/15/2016,T4,Organic with CC,R5,Triticum aestivum L. (*),45.8,3075.4,45.8,3075.4,2016
+7/15/2016,T4,Organic with CC,R4,Triticum aestivum L. (*),40.1,2697,40.1,2697,2016
+7/15/2016,T4,Organic with CC,R3,Triticum aestivum L. (*),40.7,2735.6,40.7,2735.6,2016
+7/14/2016,T2,No-Till,R6,Triticum aestivum L. (*),87.3,5869.4,87.3,5869.4,2016
+7/14/2016,T3,Reduced input with CC,R6,Triticum aestivum L. (*),73.6,4949.4,73.6,4949.4,2016
+7/14/2016,T3,Reduced input with CC,R2,Triticum aestivum L. (*),82.5,5546.1,82.5,5546.1,2016
+7/14/2016,T3,Reduced input with CC,R1,Triticum aestivum L. (*),72,4837.8,72,4837.8,2016
+7/14/2016,T4,Organic with CC,R6,Triticum aestivum L. (*),33,2216.4,33,2216.4,2016
+7/14/2016,T4,Organic with CC,R1,Triticum aestivum L. (*),41.5,2789.6,41.5,2789.6,2016
+7/12/2016,T1,Conventional,R1,Triticum aestivum L. (*),82.2,5528.7,82.2,5528.7,2016
+7/12/2016,T1,Conventional,R6,Triticum aestivum L. (*),88.2,5931.4,88.2,5931.4,2016
+7/12/2016,T1,Conventional,R5,Triticum aestivum L. (*),81.8,5502,81.8,5502,2016
+7/12/2016,T1,Conventional,R4,Triticum aestivum L. (*),84.3,5667.8,84.3,5667.8,2016
+7/12/2016,T1,Conventional,R3,Triticum aestivum L. (*),89.9,6042.3,89.9,6042.3,2016
+7/12/2016,T1,Conventional,R2,Triticum aestivum L. (*),91,6118.4,91,6118.4,2016
+7/12/2016,T2,No-Till,R5,Triticum aestivum L. (*),85.9,5774,85.9,5774,2016
+7/12/2016,T2,No-Till,R4,Triticum aestivum L. (*),88.9,5973.7,88.9,5973.7,2016
+7/12/2016,T2,No-Till,R3,Triticum aestivum L. (*),91.7,6165.1,91.7,6165.1,2016
+7/12/2016,T2,No-Till,R2,Triticum aestivum L. (*),84.3,5669.8,84.3,5669.8,2016
+7/12/2016,T2,No-Till,R1,Triticum aestivum L. (*),87.3,5866.9,87.3,5866.9,2016
+10/20/2015,T4,Organic with CC,R2,Glycine max L. (*),34.5,2325,34.5,2325,2015
+10/20/2015,T4,Organic with CC,R1,Glycine max L. (*),42,2828.2,42,2828.2,2015
+10/20/2015,T4,Organic with CC,R3,Glycine max L. (*),42.5,2863.5,42.5,2863.5,2015
+10/20/2015,T4,Organic with CC,R6,Glycine max L. (*),28.1,1895.6,28.1,1895.6,2015
+10/20/2015,T4,Organic with CC,R5,Glycine max L. (*),36.9,2488.2,36.9,2488.2,2015
+10/20/2015,T4,Organic with CC,R4,Glycine max L. (*),41.3,2780.8,41.3,2780.8,2015
+10/2/2015,T1,Conventional,R4,Glycine max L. (*),51.8,3489.4,51.8,3489.4,2015
+10/2/2015,T3,Reduced input with CC,R3,Glycine max L. (*),57.1,3844.2,57.1,3844.2,2015
+10/1/2015,T1,Conventional,R5,Glycine max L. (*),49.7,3349.8,49.7,3349.8,2015
+10/1/2015,T1,Conventional,R1,Glycine max L. (*),45.1,3041.2,45.1,3041.2,2015
+10/1/2015,T2,No-Till,R5,Glycine max L. (*),58.2,3922,58.2,3922,2015
+10/1/2015,T2,No-Till,R4,Glycine max L. (*),58.4,3936.9,58.4,3936.9,2015
+10/1/2015,T2,No-Till,R3,Glycine max L. (*),60.1,4047.9,60.1,4047.9,2015
+10/1/2015,T2,No-Till,R2,Glycine max L. (*),59,3975.2,59,3975.2,2015
+10/1/2015,T3,Reduced input with CC,R5,Glycine max L. (*),60.8,4093.1,60.8,4093.1,2015
+10/1/2015,T3,Reduced input with CC,R4,Glycine max L. (*),62.3,4198.8,62.3,4198.8,2015
+10/1/2015,T3,Reduced input with CC,R2,Glycine max L. (*),64.1,4319.2,64.1,4319.2,2015
+9/30/2015,T1,Conventional,R2,Glycine max L. (*),58.4,3931.8,58.4,3931.8,2015
+9/30/2015,T1,Conventional,R6,Glycine max L. (*),55.8,3756.7,55.8,3756.7,2015
+9/30/2015,T1,Conventional,R3,Glycine max L. (*),54.2,3652.6,54.2,3652.6,2015
+9/30/2015,T2,No-Till,R6,Glycine max L. (*),58.5,3941,58.5,3941,2015
+9/30/2015,T2,No-Till,R1,Glycine max L. (*),59,3971.7,59,3971.7,2015
+9/30/2015,T3,Reduced input with CC,R6,Glycine max L. (*),62.8,4227.6,62.8,4227.6,2015
+9/30/2015,T3,Reduced input with CC,R1,Glycine max L. (*),63,4242.3,63,4242.3,2015
+11/7/2014,T4,Organic with CC,R2,Zea mays L. (*),97.6,6125.3,97.6,6125.3,2014
+11/7/2014,T4,Organic with CC,R6,Zea mays L. (*),49.2,3084,49.2,3084,2014
+11/7/2014,T4,Organic with CC,R5,Zea mays L. (*),83.3,5224.5,83.3,5224.5,2014
+11/7/2014,T4,Organic with CC,R4,Zea mays L. (*),95.9,6017.8,95.9,6017.8,2014
+11/7/2014,T4,Organic with CC,R3,Zea mays L. (*),101.2,6346.7,101.2,6346.7,2014
+11/7/2014,T4,Organic with CC,R1,Zea mays L. (*),96.5,6057.6,96.5,6057.6,2014
+11/5/2014,T3,Reduced input with CC,R2,Zea mays L. (*),161.5,10130.7,161.5,10130.7,2014
+11/5/2014,T3,Reduced input with CC,R6,Zea mays L. (*),139.3,8741.2,139.3,8741.2,2014
+11/5/2014,T3,Reduced input with CC,R5,Zea mays L. (*),133.6,8383.5,133.6,8383.5,2014
+11/5/2014,T3,Reduced input with CC,R4,Zea mays L. (*),136,8533.7,136,8533.7,2014
+11/5/2014,T3,Reduced input with CC,R3,Zea mays L. (*),145.8,9149,145.8,9149,2014
+11/5/2014,T3,Reduced input with CC,R1,Zea mays L. (*),136.3,8549,136.3,8549,2014
+10/30/2014,T1,Conventional,R2,Zea mays L. (*),174.3,10934.8,174.3,10934.8,2014
+10/30/2014,T1,Conventional,R6,Zea mays L. (*),165.7,10396.3,165.7,10396.3,2014
+10/30/2014,T1,Conventional,R5,Zea mays L. (*),145.9,9156,145.9,9156,2014
+10/30/2014,T1,Conventional,R4,Zea mays L. (*),145.9,9155.8,145.9,9155.8,2014
+10/30/2014,T1,Conventional,R3,Zea mays L. (*),164.3,10309.3,164.3,10309.3,2014
+10/30/2014,T1,Conventional,R1,Zea mays L. (*),133.8,8396.5,133.8,8396.5,2014
+10/30/2014,T2,No-Till,R6,Zea mays L. (*),171.5,10760.4,171.5,10760.4,2014
+10/30/2014,T2,No-Till,R5,Zea mays L. (*),185.3,11623.6,185.3,11623.6,2014
+10/30/2014,T2,No-Till,R4,Zea mays L. (*),189.2,11867.8,189.2,11867.8,2014
+10/30/2014,T2,No-Till,R3,Zea mays L. (*),189.8,11905.8,189.8,11905.8,2014
+10/30/2014,T2,No-Till,R2,Zea mays L. (*),181.8,11405.4,181.8,11405.4,2014
+10/30/2014,T2,No-Till,R1,Zea mays L. (*),176.3,11058.1,176.3,11058.1,2014
+7/19/2013,T1,Conventional,R6,Triticum aestivum L. (*),55.2,3712.1,55.2,3712.1,2013
+7/19/2013,T1,Conventional,R5,Triticum aestivum L. (*),54.9,3690.9,54.9,3690.9,2013
+7/19/2013,T1,Conventional,R4,Triticum aestivum L. (*),54.5,3663.6,54.5,3663.6,2013
+7/19/2013,T1,Conventional,R3,Triticum aestivum L. (*),53.7,3613,53.7,3613,2013
+7/19/2013,T1,Conventional,R2,Triticum aestivum L. (*),59.4,3990.1,59.4,3990.1,2013
+7/19/2013,T1,Conventional,R1,Triticum aestivum L. (*),53.9,3624.5,53.9,3624.5,2013
+7/19/2013,T2,No-Till,R6,Triticum aestivum L. (*),48.8,3277.4,48.8,3277.4,2013
+7/19/2013,T2,No-Till,R5,Triticum aestivum L. (*),42.7,2868.9,42.7,2868.9,2013
+7/19/2013,T2,No-Till,R4,Triticum aestivum L. (*),40.2,2699.1,40.2,2699.1,2013
+7/19/2013,T2,No-Till,R3,Triticum aestivum L. (*),50.4,3386.2,50.4,3386.2,2013
+7/19/2013,T2,No-Till,R2,Triticum aestivum L. (*),47,3156.8,47,3156.8,2013
+7/19/2013,T2,No-Till,R1,Triticum aestivum L. (*),41.8,2809.7,41.8,2809.7,2013
+7/19/2013,T3,Reduced input with CC,R6,Triticum aestivum L. (*),49.7,3344,49.7,3344,2013
+7/19/2013,T3,Reduced input with CC,R5,Triticum aestivum L. (*),41.7,2803.7,41.7,2803.7,2013
+7/19/2013,T3,Reduced input with CC,R4,Triticum aestivum L. (*),49.2,3309.9,49.2,3309.9,2013
+7/19/2013,T3,Reduced input with CC,R3,Triticum aestivum L. (*),52.7,3545.4,52.7,3545.4,2013
+7/19/2013,T3,Reduced input with CC,R2,Triticum aestivum L. (*),54,3632.3,54,3632.3,2013
+7/19/2013,T3,Reduced input with CC,R1,Triticum aestivum L. (*),48.8,3281.1,48.8,3281.1,2013
+7/19/2013,T4,Organic with CC,R2,Triticum aestivum L. (*),26.9,1806,26.9,1806,2013
+7/19/2013,T4,Organic with CC,R6,Triticum aestivum L. (*),22.5,1512.6,22.5,1512.6,2013
+7/19/2013,T4,Organic with CC,R5,Triticum aestivum L. (*),25.4,1706.1,25.4,1706.1,2013
+7/19/2013,T4,Organic with CC,R4,Triticum aestivum L. (*),27,1815.5,27,1815.5,2013
+7/19/2013,T4,Organic with CC,R3,Triticum aestivum L. (*),27.9,1873.5,27.9,1873.5,2013
+7/19/2013,T4,Organic with CC,R1,Triticum aestivum L. (*),28.3,1900.9,28.3,1900.9,2013
+10/25/2012,T4,Organic with CC,R5,Glycine max L. (*),14.9,1006.1,14.9,1006.1,2012
+10/25/2012,T4,Organic with CC,R6,Glycine max L. (*),16.6,1117.5,16.6,1117.5,2012
+10/25/2012,T4,Organic with CC,R4,Glycine max L. (*),18.4,1236.2,18.4,1236.2,2012
+10/25/2012,T4,Organic with CC,R3,Glycine max L. (*),19.4,1309.2,19.4,1309.2,2012
+10/25/2012,T4,Organic with CC,R2,Glycine max L. (*),20,1347,20,1347,2012
+10/25/2012,T4,Organic with CC,R1,Glycine max L. (*),19,1276.7,19,1276.7,2012
+10/12/2012,T1,Conventional,R6,Glycine max L. (*),25.8,1737.7,25.8,1737.7,2012
+10/12/2012,T1,Conventional,R4,Glycine max L. (*),15.7,1057.2,15.7,1057.2,2012
+10/12/2012,T1,Conventional,R3,Glycine max L. (*),23.8,1603.3,23.8,1603.3,2012
+10/12/2012,T1,Conventional,R1,Glycine max L. (*),14.8,998.3,14.8,998.3,2012
+10/12/2012,T1,Conventional,R2,Glycine max L. (*),18.3,1231.4,18.3,1231.4,2012
+10/12/2012,T2,No-Till,R4,Glycine max L. (*),30,2021,30,2021,2012
+10/12/2012,T2,No-Till,R2,Glycine max L. (*),29.8,2004.9,29.8,2004.9,2012
+10/12/2012,T2,No-Till,R1,Glycine max L. (*),26.3,1768.6,26.3,1768.6,2012
+10/12/2012,T2,No-Till,R6,Glycine max L. (*),26.8,1807.6,26.8,1807.6,2012
+10/12/2012,T3,Reduced input with CC,R6,Glycine max L. (*),22.2,1495.1,22.2,1495.1,2012
+10/12/2012,T3,Reduced input with CC,R3,Glycine max L. (*),19.7,1326,19.7,1326,2012
+10/12/2012,T3,Reduced input with CC,R2,Glycine max L. (*),25.1,1690.6,25.1,1690.6,2012
+10/12/2012,T3,Reduced input with CC,R1,Glycine max L. (*),18.4,1239.9,18.4,1239.9,2012
+10/11/2012,T1,Conventional,R5,Glycine max L. (*),17.6,1183.3,17.6,1183.3,2012
+10/11/2012,T2,No-Till,R5,Glycine max L. (*),25.7,1733.8,25.7,1733.8,2012
+10/11/2012,T2,No-Till,R3,Glycine max L. (*),29.2,1968.4,29.2,1968.4,2012
+10/11/2012,T3,Reduced input with CC,R5,Glycine max L. (*),21.3,1437.9,21.3,1437.9,2012
+10/11/2012,T3,Reduced input with CC,R4,Glycine max L. (*),18.4,1238.5,18.4,1238.5,2012
+11/16/2011,T3,Reduced input with CC,R4,Zea mays L. (*),188.2,11810.2,188.2,11810.2,2011
+11/16/2011,T3,Reduced input with CC,R5,Zea mays L. (*),182.7,11462.2,182.7,11462.2,2011
+11/16/2011,T4,Organic with CC,R1,Zea mays L. (*),107.5,6746.7,107.5,6746.7,2011
+11/16/2011,T4,Organic with CC,R6,Zea mays L. (*),92.7,5814.6,92.7,5814.6,2011
+11/16/2011,T4,Organic with CC,R5,Zea mays L. (*),91.5,5743.8,91.5,5743.8,2011
+11/16/2011,T4,Organic with CC,R4,Zea mays L. (*),110.4,6924.2,110.4,6924.2,2011
+11/16/2011,T4,Organic with CC,R3,Zea mays L. (*),106.7,6697.2,106.7,6697.2,2011
+11/16/2011,T4,Organic with CC,R2,Zea mays L. (*),110.2,6913.1,110.2,6913.1,2011
+11/15/2011,T1,Conventional,R3,Zea mays L. (*),153.1,9608.3,153.1,9608.3,2011
+11/15/2011,T1,Conventional,R6,Zea mays L. (*),180.7,11339.7,180.7,11339.7,2011
+11/15/2011,T2,No-Till,R1,Zea mays L. (*),162.3,10183,162.3,10183,2011
+11/15/2011,T2,No-Till,R6,Zea mays L. (*),181.2,11370.5,181.2,11370.5,2011
+11/15/2011,T3,Reduced input with CC,R6,Zea mays L. (*),193,12107.1,193,12107.1,2011
+11/15/2011,T3,Reduced input with CC,R3,Zea mays L. (*),189.1,11863,189.1,11863,2011
+11/15/2011,T3,Reduced input with CC,R2,Zea mays L. (*),205,12861.5,205,12861.5,2011
+11/15/2011,T3,Reduced input with CC,R1,Zea mays L. (*),175.3,10997.9,175.3,10997.9,2011
+11/14/2011,T1,Conventional,R5,Zea mays L. (*),179.1,11234.1,179.1,11234.1,2011
+11/14/2011,T1,Conventional,R4,Zea mays L. (*),175.6,11018.4,175.6,11018.4,2011
+11/14/2011,T1,Conventional,R2,Zea mays L. (*),189.2,11867.8,189.2,11867.8,2011
+11/14/2011,T1,Conventional,R1,Zea mays L. (*),173.8,10904.4,173.8,10904.4,2011
+11/14/2011,T2,No-Till,R5,Zea mays L. (*),184.8,11595.5,184.8,11595.5,2011
+11/14/2011,T2,No-Till,R4,Zea mays L. (*),194.2,12186.7,194.2,12186.7,2011
+11/14/2011,T2,No-Till,R3,Zea mays L. (*),194.3,12188.5,194.3,12188.5,2011
+11/14/2011,T2,No-Till,R2,Zea mays L. (*),184.9,11598.6,184.9,11598.6,2011
+7/16/2010,T3,Reduced input with CC,R1,Triticum aestivum L. (*),52.5,3528.7,52.5,3528.7,2010
+7/16/2010,T3,Reduced input with CC,R6,Triticum aestivum L. (*),46.3,3109,46.3,3109,2010
+7/16/2010,T3,Reduced input with CC,R4,Triticum aestivum L. (*),50.3,3378.6,50.3,3378.6,2010
+7/16/2010,T3,Reduced input with CC,R3,Triticum aestivum L. (*),49.2,3304.7,49.2,3304.7,2010
+7/16/2010,T3,Reduced input with CC,R2,Triticum aestivum L. (*),35.8,2404.3,35.8,2404.3,2010
+7/16/2010,T4,Organic with CC,R6,Triticum aestivum L. (*),22.2,1492.7,22.2,1492.7,2010
+7/16/2010,T4,Organic with CC,R3,Triticum aestivum L. (*),28,1881.7,28,1881.7,2010
+7/16/2010,T4,Organic with CC,R2,Triticum aestivum L. (*),27,1811.7,27,1811.7,2010
+7/16/2010,T4,Organic with CC,R1,Triticum aestivum L. (*),33.9,2276.5,33.9,2276.5,2010
+7/15/2010,T3,Reduced input with CC,R5,Triticum aestivum L. (*),44.6,2995.2,44.6,2995.2,2010
+7/15/2010,T4,Organic with CC,R4,Triticum aestivum L. (*),32,2150.3,32,2150.3,2010
+7/15/2010,T4,Organic with CC,R5,Triticum aestivum L. (*),29.8,2002.4,29.8,2002.4,2010
+7/14/2010,T1,Conventional,R2,Triticum aestivum L. (*),40.3,2707.8,40.3,2707.8,2010
+7/14/2010,T1,Conventional,R6,Triticum aestivum L. (*),42.4,2850.5,42.4,2850.5,2010
+7/14/2010,T1,Conventional,R5,Triticum aestivum L. (*),37.8,2539.3,37.8,2539.3,2010
+7/14/2010,T1,Conventional,R4,Triticum aestivum L. (*),38.2,2570.5,38.2,2570.5,2010
+7/14/2010,T1,Conventional,R3,Triticum aestivum L. (*),47.7,3206.1,47.7,3206.1,2010
+7/14/2010,T1,Conventional,R1,Triticum aestivum L. (*),32,2152.4,32,2152.4,2010
+7/14/2010,T2,No-Till,R6,Triticum aestivum L. (*),50.7,3405,50.7,3405,2010
+7/14/2010,T2,No-Till,R5,Triticum aestivum L. (*),54.3,3649.9,54.3,3649.9,2010
+7/14/2010,T2,No-Till,R4,Triticum aestivum L. (*),54.4,3653.6,54.4,3653.6,2010
+7/14/2010,T2,No-Till,R3,Triticum aestivum L. (*),56.6,3804.6,56.6,3804.6,2010
+7/14/2010,T2,No-Till,R2,Triticum aestivum L. (*),53.3,3583.8,53.3,3583.8,2010
+7/14/2010,T2,No-Till,R1,Triticum aestivum L. (*),56.2,3779,56.2,3779,2010
+10/19/2009,T1,Conventional,R3,Glycine max L. (*),29.7,2000.9,29.7,2000.9,2009
+10/19/2009,T1,Conventional,R6,Glycine max L. (*),30.6,2058.1,30.6,2058.1,2009
+10/19/2009,T1,Conventional,R2,Glycine max L. (*),30.4,2047.9,30.4,2047.9,2009
+10/19/2009,T2,No-Till,R6,Glycine max L. (*),38.8,2611.3,38.8,2611.3,2009
+10/19/2009,T2,No-Till,R1,Glycine max L. (*),39.2,2641.8,39.2,2641.8,2009
+10/19/2009,T3,Reduced input with CC,R6,Glycine max L. (*),38.5,2593.9,38.5,2593.9,2009
+10/19/2009,T3,Reduced input with CC,R3,Glycine max L. (*),33.7,2273,33.7,2273,2009
+10/19/2009,T3,Reduced input with CC,R2,Glycine max L. (*),35.3,2375.1,35.3,2375.1,2009
+10/19/2009,T3,Reduced input with CC,R1,Glycine max L. (*),28.4,1915.8,28.4,1915.8,2009
+10/19/2009,T4,Organic with CC,R6,Glycine max L. (*),27.1,1825.5,27.1,1825.5,2009
+10/19/2009,T4,Organic with CC,R5,Glycine max L. (*),28.1,1895.1,28.1,1895.1,2009
+10/19/2009,T4,Organic with CC,R4,Glycine max L. (*),37.4,2519.5,37.4,2519.5,2009
+10/19/2009,T4,Organic with CC,R3,Glycine max L. (*),34.9,2348.8,34.9,2348.8,2009
+10/19/2009,T4,Organic with CC,R2,Glycine max L. (*),29.6,1992.4,29.6,1992.4,2009
+10/19/2009,T4,Organic with CC,R1,Glycine max L. (*),35.7,2406.4,35.7,2406.4,2009
+10/16/2009,T1,Conventional,R1,Glycine max L. (*),26,1753.7,26,1753.7,2009
+10/16/2009,T1,Conventional,R5,Glycine max L. (*),29.6,1996.2,29.6,1996.2,2009
+10/16/2009,T1,Conventional,R4,Glycine max L. (*),28.9,1948,28.9,1948,2009
+10/16/2009,T2,No-Till,R5,Glycine max L. (*),33.8,2274.2,33.8,2274.2,2009
+10/16/2009,T2,No-Till,R4,Glycine max L. (*),38.1,2567.3,38.1,2567.3,2009
+10/16/2009,T2,No-Till,R3,Glycine max L. (*),38.6,2598.5,38.6,2598.5,2009
+10/16/2009,T2,No-Till,R2,Glycine max L. (*),40.5,2727.5,40.5,2727.5,2009
+10/16/2009,T3,Reduced input with CC,R5,Glycine max L. (*),29.7,2000.9,29.7,2000.9,2009
+10/16/2009,T3,Reduced input with CC,R4,Glycine max L. (*),32,2152.7,32,2152.7,2009
+11/3/2008,T3,Reduced input with CC,R1,Zea mays L. (*),75.6,4743.3,75.6,4743.3,2008
+11/3/2008,T3,Reduced input with CC,R6,Zea mays L. (*),86.6,5434.1,86.6,5434.1,2008
+11/3/2008,T3,Reduced input with CC,R5,Zea mays L. (*),80.7,5065.8,80.7,5065.8,2008
+11/3/2008,T3,Reduced input with CC,R4,Zea mays L. (*),78.3,4914.7,78.3,4914.7,2008
+11/3/2008,T3,Reduced input with CC,R3,Zea mays L. (*),75.6,4744.1,75.6,4744.1,2008
+11/3/2008,T3,Reduced input with CC,R2,Zea mays L. (*),88.9,5576.2,88.9,5576.2,2008
+11/3/2008,T4,Organic with CC,R6,Zea mays L. (*),52.2,3275.4,52.2,3275.4,2008
+11/3/2008,T4,Organic with CC,R5,Zea mays L. (*),43.1,2701.1,43.1,2701.1,2008
+11/3/2008,T4,Organic with CC,R4,Zea mays L. (*),60.7,3810.1,60.7,3810.1,2008
+11/3/2008,T4,Organic with CC,R3,Zea mays L. (*),63.2,3966.7,63.2,3966.7,2008
+11/3/2008,T4,Organic with CC,R2,Zea mays L. (*),59.2,3713.5,59.2,3713.5,2008
+11/3/2008,T4,Organic with CC,R1,Zea mays L. (*),77.1,4838,77.1,4838,2008
+10/21/2008,T1,Conventional,R5,Zea mays L. (*),78.2,4908.2,78.2,4908.2,2008
+10/21/2008,T1,Conventional,R1,Zea mays L. (*),60.9,3818.1,60.9,3818.1,2008
+10/21/2008,T2,No-Till,R5,Zea mays L. (*),102.7,6441.8,102.7,6441.8,2008
+10/21/2008,T2,No-Till,R4,Zea mays L. (*),112.5,7057.8,112.5,7057.8,2008
+10/21/2008,T2,No-Till,R3,Zea mays L. (*),110.1,6907.7,110.1,6907.7,2008
+10/21/2008,T2,No-Till,R2,Zea mays L. (*),107.5,6745.2,107.5,6745.2,2008
+10/20/2008,T1,Conventional,R2,Zea mays L. (*),86.6,5432.5,86.6,5432.5,2008
+10/20/2008,T1,Conventional,R6,Zea mays L. (*),110.7,6943.3,110.7,6943.3,2008
+10/20/2008,T1,Conventional,R4,Zea mays L. (*),66.1,4147.3,66.1,4147.3,2008
+10/20/2008,T1,Conventional,R3,Zea mays L. (*),102.2,6410.8,102.2,6410.8,2008
+10/20/2008,T2,No-Till,R6,Zea mays L. (*),93.1,5838.1,93.1,5838.1,2008
+10/20/2008,T2,No-Till,R1,Zea mays L. (*),97.4,6107.9,97.4,6107.9,2008
+7/10/2007,T1,Conventional,R2,Triticum aestivum L. (*),50.4,3387,50.4,3387,2007
+7/10/2007,T1,Conventional,R6,Triticum aestivum L. (*),38.5,2586.4,38.5,2586.4,2007
+7/10/2007,T1,Conventional,R3,Triticum aestivum L. (*),51.6,3469.1,51.6,3469.1,2007
+7/10/2007,T2,No-Till,R6,Triticum aestivum L. (*),59.2,3982.3,59.2,3982.3,2007
+7/10/2007,T2,No-Till,R1,Triticum aestivum L. (*),58.2,3909.1,58.2,3909.1,2007
+7/10/2007,T3,Reduced input with CC,R6,Triticum aestivum L. (*),39.6,2659.2,39.6,2659.2,2007
+7/10/2007,T3,Reduced input with CC,R5,Triticum aestivum L. (*),37.5,2521.5,37.5,2521.5,2007
+7/10/2007,T3,Reduced input with CC,R4,Triticum aestivum L. (*),36.6,2457.8,36.6,2457.8,2007
+7/10/2007,T3,Reduced input with CC,R3,Triticum aestivum L. (*),37.2,2501.2,37.2,2501.2,2007
+7/10/2007,T3,Reduced input with CC,R2,Triticum aestivum L. (*),36.9,2479.8,36.9,2479.8,2007
+7/10/2007,T3,Reduced input with CC,R1,Triticum aestivum L. (*),39,2623.4,39,2623.4,2007
+7/10/2007,T4,Organic with CC,R6,Triticum aestivum L. (*),24.1,1623.3,24.1,1623.3,2007
+7/10/2007,T4,Organic with CC,R5,Triticum aestivum L. (*),27.3,1832,27.3,1832,2007
+7/10/2007,T4,Organic with CC,R4,Triticum aestivum L. (*),29.1,1955.7,29.1,1955.7,2007
+7/10/2007,T4,Organic with CC,R3,Triticum aestivum L. (*),29.7,1997.5,29.7,1997.5,2007
+7/10/2007,T4,Organic with CC,R2,Triticum aestivum L. (*),30.4,2041.7,30.4,2041.7,2007
+7/10/2007,T4,Organic with CC,R1,Triticum aestivum L. (*),32.9,2212,32.9,2212,2007
+7/9/2007,T1,Conventional,R5,Triticum aestivum L. (*),45.8,3080.9,45.8,3080.9,2007
+7/9/2007,T1,Conventional,R4,Triticum aestivum L. (*),49,3296.7,49,3296.7,2007
+7/9/2007,T1,Conventional,R1,Triticum aestivum L. (*),42.1,2832.8,42.1,2832.8,2007
+7/9/2007,T2,No-Till,R5,Triticum aestivum L. (*),62.5,4199.2,62.5,4199.2,2007
+7/9/2007,T2,No-Till,R4,Triticum aestivum L. (*),63.1,4239.5,63.1,4239.5,2007
+7/9/2007,T2,No-Till,R3,Triticum aestivum L. (*),66,4434.7,66,4434.7,2007
+7/9/2007,T2,No-Till,R2,Triticum aestivum L. (*),65.9,4428.6,65.9,4428.6,2007
+10/25/2006,T4,Organic with CC,R6,Glycine max L. (*),38.7,2606.6,38.7,2606.6,2006
+10/10/2006,T1,Conventional,R1,Glycine max L. (*),37.5,2523.8,37.5,2523.8,2006
+10/10/2006,T1,Conventional,R5,Glycine max L. (*),41.7,2806.2,41.7,2806.2,2006
+10/10/2006,T2,No-Till,R2,Glycine max L. (*),55.8,3758.3,55.8,3758.3,2006
+10/10/2006,T2,No-Till,R5,Glycine max L. (*),52.6,3540.1,52.6,3540.1,2006
+10/10/2006,T3,Reduced input with CC,R1,Glycine max L. (*),45.5,3067.8,45.5,3067.8,2006
+10/10/2006,T3,Reduced input with CC,R2,Glycine max L. (*),51.1,3440.5,51.1,3440.5,2006
+10/10/2006,T3,Reduced input with CC,R3,Glycine max L. (*),48.3,3252.4,48.3,3252.4,2006
+10/10/2006,T3,Reduced input with CC,R4,Glycine max L. (*),45.9,3092.6,45.9,3092.6,2006
+10/10/2006,T3,Reduced input with CC,R5,Glycine max L. (*),46.1,3108.6,46.1,3108.6,2006
+10/10/2006,T3,Reduced input with CC,R6,Glycine max L. (*),48.5,3269.5,48.5,3269.5,2006
+10/10/2006,T4,Organic with CC,R1,Glycine max L. (*),44.7,3008.2,44.7,3008.2,2006
+10/10/2006,T4,Organic with CC,R2,Glycine max L. (*),46,3099.5,46,3099.5,2006
+10/10/2006,T4,Organic with CC,R3,Glycine max L. (*),46.4,3125.9,46.4,3125.9,2006
+10/10/2006,T4,Organic with CC,R4,Glycine max L. (*),47.2,3179.4,47.2,3179.4,2006
+10/10/2006,T4,Organic with CC,R5,Glycine max L. (*),41.6,2804.1,41.6,2804.1,2006
+10/9/2006,T1,Conventional,R6,Glycine max L. (*),47,3168.2,47,3168.2,2006
+10/9/2006,T1,Conventional,R4,Glycine max L. (*),40.6,2736.2,40.6,2736.2,2006
+10/9/2006,T1,Conventional,R3,Glycine max L. (*),42.3,2848,42.3,2848,2006
+10/9/2006,T1,Conventional,R2,Glycine max L. (*),46.3,3118.4,46.3,3118.4,2006
+10/9/2006,T2,No-Till,R3,Glycine max L. (*),53.7,3614.2,53.7,3614.2,2006
+10/9/2006,T2,No-Till,R1,Glycine max L. (*),53.4,3594.6,53.4,3594.6,2006
+10/9/2006,T2,No-Till,R6,Glycine max L. (*),53,3572,53,3572,2006
+10/9/2006,T2,No-Till,R4,Glycine max L. (*),52.4,3530.7,52.4,3530.7,2006
+10/12/2005,T1,Conventional,R6,Zea mays L. (*),139.7,8785.8,139.7,8785.8,2005
+10/12/2005,T1,Conventional,R4,Zea mays L. (*),101,6347.6,101,6347.6,2005
+10/12/2005,T1,Conventional,R2,Zea mays L. (*),131.3,8253.9,131.3,8253.9,2005
+10/12/2005,T1,Conventional,R3,Zea mays L. (*),132.8,8350.8,132.8,8350.8,2005
+10/12/2005,T2,No-Till,R6,Zea mays L. (*),127,7984.2,127,7984.2,2005
+10/12/2005,T2,No-Till,R1,Zea mays L. (*),125.8,7906.9,125.8,7906.9,2005
+10/12/2005,T3,Reduced input with CC,R6,Zea mays L. (*),126,7923.8,126,7923.8,2005
+10/12/2005,T3,Reduced input with CC,R3,Zea mays L. (*),112.7,7083.9,112.7,7083.9,2005
+10/12/2005,T3,Reduced input with CC,R1,Zea mays L. (*),113.9,7158.1,113.9,7158.1,2005
+10/12/2005,T4,Organic with CC,R6,Zea mays L. (*),94.6,5947.1,94.6,5947.1,2005
+10/12/2005,T4,Organic with CC,R1,Zea mays L. (*),90.9,5713.9,90.9,5713.9,2005
+10/11/2005,T1,Conventional,R5,Zea mays L. (*),98.1,6164.7,98.1,6164.7,2005
+10/11/2005,T2,No-Till,R5,Zea mays L. (*),139.1,8742.5,139.1,8742.5,2005
+10/11/2005,T2,No-Till,R4,Zea mays L. (*),137.5,8645,137.5,8645,2005
+10/11/2005,T2,No-Till,R3,Zea mays L. (*),161.6,10159.6,161.6,10159.6,2005
+10/11/2005,T2,No-Till,R2,Zea mays L. (*),149.4,9391.3,149.4,9391.3,2005
+10/11/2005,T3,Reduced input with CC,R5,Zea mays L. (*),127.9,8043.3,127.9,8043.3,2005
+10/11/2005,T3,Reduced input with CC,R4,Zea mays L. (*),116.8,7341.6,116.8,7341.6,2005
+10/11/2005,T3,Reduced input with CC,R2,Zea mays L. (*),130.6,8212.4,130.6,8212.4,2005
+10/11/2005,T4,Organic with CC,R5,Zea mays L. (*),73.8,4638.1,73.8,4638.1,2005
+10/11/2005,T4,Organic with CC,R4,Zea mays L. (*),63.1,3964.8,63.1,3964.8,2005
+10/11/2005,T4,Organic with CC,R3,Zea mays L. (*),72.8,4578.4,72.8,4578.4,2005
+10/11/2005,T4,Organic with CC,R2,Zea mays L. (*),81.7,5136.1,81.7,5136.1,2005
+10/10/2005,T1,Conventional,R1,Zea mays L. (*),95.1,5977.3,95.1,5977.3,2005
+7/15/2004,T3,Reduced input with CC,R6,Triticum aestivum L. (*),55.5,3731.4,55.5,3731.4,2004
+7/15/2004,T3,Reduced input with CC,R5,Triticum aestivum L. (*),55,3700.4,55,3700.4,2004
+7/15/2004,T4,Organic with CC,R6,Triticum aestivum L. (*),31.9,2143.9,31.9,2143.9,2004
+7/14/2004,T3,Reduced input with CC,R4,Triticum aestivum L. (*),56,3767.7,56,3767.7,2004
+7/14/2004,T3,Reduced input with CC,R3,Triticum aestivum L. (*),60.2,4048.2,60.2,4048.2,2004
+7/14/2004,T4,Organic with CC,R5,Triticum aestivum L. (*),31.4,2112.5,31.4,2112.5,2004
+7/14/2004,T4,Organic with CC,R4,Triticum aestivum L. (*),28.9,1941.5,28.9,1941.5,2004
+7/14/2004,T4,Organic with CC,R1,Triticum aestivum L. (*),38.2,2569.6,38.2,2569.6,2004
+7/13/2004,T1,Conventional,R2,Triticum aestivum L. (*),63.2,4250.1,63.2,4250.1,2004
+7/13/2004,T1,Conventional,R6,Triticum aestivum L. (*),59.1,3971.3,59.1,3971.3,2004
+7/13/2004,T1,Conventional,R4,Triticum aestivum L. (*),62.3,4185.7,62.3,4185.7,2004
+7/13/2004,T1,Conventional,R3,Triticum aestivum L. (*),61.1,4106.1,61.1,4106.1,2004
+7/13/2004,T2,No-Till,R6,Triticum aestivum L. (*),61,4101.1,61,4101.1,2004
+7/13/2004,T2,No-Till,R1,Triticum aestivum L. (*),62.5,4204.3,62.5,4204.3,2004
+7/13/2004,T3,Reduced input with CC,R2,Triticum aestivum L. (*),60.6,4071.2,60.6,4071.2,2004
+7/13/2004,T3,Reduced input with CC,R1,Triticum aestivum L. (*),56,3765.1,56,3765.1,2004
+7/13/2004,T4,Organic with CC,R3,Triticum aestivum L. (*),36.5,2453,36.5,2453,2004
+7/13/2004,T4,Organic with CC,R2,Triticum aestivum L. (*),38.3,2575.3,38.3,2575.3,2004
+7/12/2004,T1,Conventional,R5,Triticum aestivum L. (*),59.7,4010.7,59.7,4010.7,2004
+7/12/2004,T1,Conventional,R1,Triticum aestivum L. (*),58.4,3926.5,58.4,3926.5,2004
+7/12/2004,T2,No-Till,R5,Triticum aestivum L. (*),58.5,3933.7,58.5,3933.7,2004
+7/12/2004,T2,No-Till,R4,Triticum aestivum L. (*),61.1,4107.5,61.1,4107.5,2004
+7/12/2004,T2,No-Till,R3,Triticum aestivum L. (*),65,4371.5,65,4371.5,2004
+7/12/2004,T2,No-Till,R2,Triticum aestivum L. (*),63.2,4251.7,63.2,4251.7,2004
+10/7/2003,T1,Conventional,R6,Glycine max L. (*),26.1,1760.2,26.1,1760.2,2003
+10/7/2003,T2,No-Till,R6,Glycine max L. (*),25.6,1724.2,25.6,1724.2,2003
+10/7/2003,T3,Reduced input with CC,R6,Glycine max L. (*),17.3,1166.1,17.3,1166.1,2003
+10/7/2003,T3,Reduced input with CC,R5,Glycine max L. (*),15.6,1049,15.6,1049,2003
+10/7/2003,T3,Reduced input with CC,R4,Glycine max L. (*),16.1,1086.2,16.1,1086.2,2003
+10/7/2003,T3,Reduced input with CC,R2,Glycine max L. (*),14.1,946.5,14.1,946.5,2003
+10/7/2003,T3,Reduced input with CC,R1,Glycine max L. (*),20,1349.2,20,1349.2,2003
+10/7/2003,T4,Organic with CC,R1,Glycine max L. (*),18,1211.6,18,1211.6,2003
+10/7/2003,T4,Organic with CC,R6,Glycine max L. (*),14.2,956.4,14.2,956.4,2003
+10/7/2003,T4,Organic with CC,R5,Glycine max L. (*),10.1,681.9,10.1,681.9,2003
+10/7/2003,T4,Organic with CC,R4,Glycine max L. (*),14.5,975.5,14.5,975.5,2003
+10/7/2003,T4,Organic with CC,R3,Glycine max L. (*),15.5,1042.8,15.5,1042.8,2003
+10/7/2003,T4,Organic with CC,R2,Glycine max L. (*),17.7,1189.4,17.7,1189.4,2003
+10/6/2003,T1,Conventional,R5,Glycine max L. (*),22.9,1541.1,22.9,1541.1,2003
+10/6/2003,T1,Conventional,R4,Glycine max L. (*),23.5,1583.1,23.5,1583.1,2003
+10/6/2003,T1,Conventional,R3,Glycine max L. (*),26.1,1759.1,26.1,1759.1,2003
+10/6/2003,T1,Conventional,R2,Glycine max L. (*),26.6,1791.5,26.6,1791.5,2003
+10/6/2003,T1,Conventional,R1,Glycine max L. (*),19.2,1290.2,19.2,1290.2,2003
+10/6/2003,T2,No-Till,R1,Glycine max L. (*),28.5,1920.3,28.5,1920.3,2003
+10/6/2003,T2,No-Till,R5,Glycine max L. (*),26.2,1764,26.2,1764,2003
+10/6/2003,T2,No-Till,R4,Glycine max L. (*),28.1,1893.4,28.1,1893.4,2003
+10/6/2003,T2,No-Till,R3,Glycine max L. (*),28.6,1926,28.6,1926,2003
+10/6/2003,T2,No-Till,R2,Glycine max L. (*),28.2,1901.2,28.2,1901.2,2003
+10/6/2003,T3,Reduced input with CC,R3,Glycine max L. (*),23.6,1592.9,23.6,1592.9,2003
+11/7/2002,T4,Organic with CC,R5,Zea mays L. (*),71.2,4465.8,71.2,4465.8,2002
+11/7/2002,T4,Organic with CC,R6,Zea mays L. (*),47.1,2956.7,47.1,2956.7,2002
+11/5/2002,T4,Organic with CC,R4,Zea mays L. (*),88.8,5572.4,88.8,5572.4,2002
+11/5/2002,T4,Organic with CC,R2,Zea mays L. (*),95.3,5980,95.3,5980,2002
+11/4/2002,T4,Organic with CC,R1,Zea mays L. (*),110.5,6934.1,110.5,6934.1,2002
+11/4/2002,T4,Organic with CC,R3,Zea mays L. (*),108.6,6811.2,108.6,6811.2,2002
+11/2/2002,T3,Reduced input with CC,R4,Zea mays L. (*),99.1,6218.6,99.1,6218.6,2002
+11/2/2002,T3,Reduced input with CC,R6,Zea mays L. (*),79.2,4968.2,79.2,4968.2,2002
+11/2/2002,T3,Reduced input with CC,R5,Zea mays L. (*),103.8,6512.4,103.8,6512.4,2002
+11/2/2002,T3,Reduced input with CC,R3,Zea mays L. (*),111.3,6983.9,111.3,6983.9,2002
+11/1/2002,T3,Reduced input with CC,R2,Zea mays L. (*),122.2,7664.9,122.2,7664.9,2002
+11/1/2002,T3,Reduced input with CC,R1,Zea mays L. (*),103.4,6484.4,103.4,6484.4,2002
+10/31/2002,T1,Conventional,R3,Zea mays L. (*),107,6714.1,107,6714.1,2002
+10/31/2002,T1,Conventional,R1,Zea mays L. (*),58.7,3683.8,58.7,3683.8,2002
+10/31/2002,T1,Conventional,R5,Zea mays L. (*),75.8,4756.7,75.8,4756.7,2002
+10/31/2002,T1,Conventional,R4,Zea mays L. (*),63.4,3979.9,63.4,3979.9,2002
+10/31/2002,T1,Conventional,R2,Zea mays L. (*),101.8,6385.8,101.8,6385.8,2002
+10/30/2002,T1,Conventional,R6,Zea mays L. (*),109.5,6868.5,109.5,6868.5,2002
+10/30/2002,T2,No-Till,R4,Zea mays L. (*),85.2,5347.4,85.2,5347.4,2002
+10/30/2002,T2,No-Till,R3,Zea mays L. (*),84.6,5308,84.6,5308,2002
+10/29/2002,T2,No-Till,R5,Zea mays L. (*),75.4,4731,75.4,4731,2002
+10/29/2002,T2,No-Till,R6,Zea mays L. (*),80.1,5026.9,80.1,5026.9,2002
+10/29/2002,T2,No-Till,R2,Zea mays L. (*),93.1,5842,93.1,5842,2002
+10/29/2002,T2,No-Till,R1,Zea mays L. (*),80.8,5069.2,80.8,5069.2,2002
+7/19/2001,T3,Reduced input with CC,R5,Triticum aestivum L. (*),52.3,3515.4,52.3,3515.4,2001
+7/19/2001,T4,Organic with CC,R6,Triticum aestivum L. (*),34.4,2310,34.4,2310,2001
+7/19/2001,T4,Organic with CC,R5,Triticum aestivum L. (*),39.3,2641.1,39.3,2641.1,2001
+7/19/2001,T4,Organic with CC,R4,Triticum aestivum L. (*),41.4,2785.2,41.4,2785.2,2001
+7/19/2001,T4,Organic with CC,R3,Triticum aestivum L. (*),40.3,2711.5,40.3,2711.5,2001
+7/19/2001,T4,Organic with CC,R2,Triticum aestivum L. (*),42.7,2871.8,42.7,2871.8,2001
+7/19/2001,T4,Organic with CC,R1,Triticum aestivum L. (*),44.2,2970.8,44.2,2970.8,2001
+7/17/2001,T3,Reduced input with CC,R2,Triticum aestivum L. (*),57,3834.9,57,3834.9,2001
+7/17/2001,T3,Reduced input with CC,R6,Triticum aestivum L. (*),53.4,3588.3,53.4,3588.3,2001
+7/17/2001,T3,Reduced input with CC,R4,Triticum aestivum L. (*),58.2,3911.8,58.2,3911.8,2001
+7/17/2001,T3,Reduced input with CC,R3,Triticum aestivum L. (*),55.7,3746.7,55.7,3746.7,2001
+7/17/2001,T3,Reduced input with CC,R1,Triticum aestivum L. (*),51.4,3457.5,51.4,3457.5,2001
+7/16/2001,T1,Conventional,R6,Triticum aestivum L. (*),53.4,3590.5,53.4,3590.5,2001
+7/16/2001,T1,Conventional,R5,Triticum aestivum L. (*),61.6,4142.3,61.6,4142.3,2001
+7/16/2001,T1,Conventional,R4,Triticum aestivum L. (*),66.8,4491.1,66.8,4491.1,2001
+7/16/2001,T1,Conventional,R3,Triticum aestivum L. (*),64.2,4318.2,64.2,4318.2,2001
+7/16/2001,T1,Conventional,R2,Triticum aestivum L. (*),66.9,4500.2,66.9,4500.2,2001
+7/16/2001,T1,Conventional,R1,Triticum aestivum L. (*),62.1,4176.9,62.1,4176.9,2001
+7/16/2001,T2,No-Till,R1,Triticum aestivum L. (*),53.4,3592.4,53.4,3592.4,2001
+7/16/2001,T2,No-Till,R6,Triticum aestivum L. (*),53.3,3583.8,53.3,3583.8,2001
+7/16/2001,T2,No-Till,R4,Triticum aestivum L. (*),60.5,4067.9,60.5,4067.9,2001
+7/16/2001,T2,No-Till,R3,Triticum aestivum L. (*),59.2,3982.3,59.2,3982.3,2001
+7/16/2001,T2,No-Till,R2,Triticum aestivum L. (*),50.6,3401.2,50.6,3401.2,2001
+7/16/2001,T21,,R5,Triticum aestivum L. (*),53.8,3618,53.8,3618,2001
+10/1/2000,T1,Conventional,R2,Glycine max L. (*),44.4,2985.8,44.4,2985.8,2000
+10/1/2000,T1,Conventional,R1,Glycine max L. (*),33.9,2276.2,33.9,2276.2,2000
+10/1/2000,T1,Conventional,R6,Glycine max L. (*),38.6,2591.3,38.6,2591.3,2000
+10/1/2000,T1,Conventional,R5,Glycine max L. (*),37.9,2547.8,37.9,2547.8,2000
+10/1/2000,T1,Conventional,R4,Glycine max L. (*),39.4,2648.6,39.4,2648.6,2000
+10/1/2000,T1,Conventional,R3,Glycine max L. (*),43,2890.5,43,2890.5,2000
+10/1/2000,T2,No-Till,R6,Glycine max L. (*),44.8,3007.8,44.8,3007.8,2000
+10/1/2000,T2,No-Till,R4,Glycine max L. (*),41.7,2800.9,41.7,2800.9,2000
+10/1/2000,T2,No-Till,R3,Glycine max L. (*),42.9,2882.6,42.9,2882.6,2000
+10/1/2000,T2,No-Till,R2,Glycine max L. (*),44.4,2982.1,44.4,2982.1,2000
+10/1/2000,T2,No-Till,R1,Glycine max L. (*),43.7,2938.1,43.7,2938.1,2000
+10/1/2000,T21,,R5,Glycine max L. (*),41.1,2761.8,41.1,2761.8,2000
+10/1/2000,T3,Reduced input with CC,R6,Glycine max L. (*),45.4,3052.8,45.4,3052.8,2000
+10/1/2000,T3,Reduced input with CC,R5,Glycine max L. (*),39.5,2653.7,39.5,2653.7,2000
+10/1/2000,T3,Reduced input with CC,R4,Glycine max L. (*),41.4,2782.5,41.4,2782.5,2000
+10/1/2000,T3,Reduced input with CC,R3,Glycine max L. (*),41.8,2810.6,41.8,2810.6,2000
+10/1/2000,T3,Reduced input with CC,R2,Glycine max L. (*),44.7,3000.6,44.7,3000.6,2000
+10/1/2000,T3,Reduced input with CC,R1,Glycine max L. (*),43.1,2898.5,43.1,2898.5,2000
+10/1/2000,T4,Organic with CC,R6,Glycine max L. (*),38.3,2571.3,38.3,2571.3,2000
+10/1/2000,T4,Organic with CC,R5,Glycine max L. (*),42.1,2831.8,42.1,2831.8,2000
+10/1/2000,T4,Organic with CC,R4,Glycine max L. (*),45,3024.7,45,3024.7,2000
+10/1/2000,T4,Organic with CC,R3,Glycine max L. (*),42.9,2882.3,42.9,2882.3,2000
+10/1/2000,T4,Organic with CC,R2,Glycine max L. (*),44.8,3011,44.8,3011,2000
+10/1/2000,T4,Organic with CC,R1,Glycine max L. (*),45.8,3075.8,45.8,3075.8,2000
+10/12/1999,T2,No-Till,R6,Zea mays L. (*),68.2,4274.8,68.2,4274.8,1999
+10/12/1999,T3,Reduced input with CC,R2,Zea mays L. (*),75.6,4739.3,75.6,4739.3,1999
+10/12/1999,T4,Organic with CC,R2,Zea mays L. (*),67.7,4245,67.7,4245,1999
+10/12/1999,T4,Organic with CC,R6,Zea mays L. (*),61.1,3828.9,61.1,3828.9,1999
+10/11/1999,T2,No-Till,R2,Zea mays L. (*),61.5,3856.1,61.5,3856.1,1999
+10/11/1999,T2,No-Till,R1,Zea mays L. (*),56.7,3557.9,56.7,3557.9,1999
+10/11/1999,T21,,R5,Zea mays L. (*),53.1,3332.9,53.1,3332.9,1999
+10/11/1999,T3,Reduced input with CC,R1,Zea mays L. (*),64.4,4036.4,64.4,4036.4,1999
+10/11/1999,T4,Organic with CC,R1,Zea mays L. (*),77.4,4851.1,77.4,4851.1,1999
+10/8/1999,T2,No-Till,R3,Zea mays L. (*),58.3,3657.5,58.3,3657.5,1999
+10/7/1999,T2,No-Till,R4,Zea mays L. (*),58.6,3675,58.6,3675,1999
+10/7/1999,T3,Reduced input with CC,R3,Zea mays L. (*),64.1,4020.7,64.1,4020.7,1999
+10/7/1999,T3,Reduced input with CC,R4,Zea mays L. (*),70,4388.6,70,4388.6,1999
+10/7/1999,T4,Organic with CC,R5,Zea mays L. (*),60,3765.1,60,3765.1,1999
+10/7/1999,T4,Organic with CC,R4,Zea mays L. (*),64.7,4055.2,64.7,4055.2,1999
+10/7/1999,T4,Organic with CC,R3,Zea mays L. (*),68.9,4320.1,68.9,4320.1,1999
+10/6/1999,T1,Conventional,R3,Zea mays L. (*),70.3,4407.8,70.3,4407.8,1999
+10/6/1999,T1,Conventional,R2,Zea mays L. (*),70.1,4395,70.1,4395,1999
+10/6/1999,T3,Reduced input with CC,R6,Zea mays L. (*),74.6,4677.8,74.6,4677.8,1999
+10/6/1999,T3,Reduced input with CC,R5,Zea mays L. (*),73.6,4618.3,73.6,4618.3,1999
+10/5/1999,T1,Conventional,R4,Zea mays L. (*),66,4141.4,66,4141.4,1999
+10/5/1999,T1,Conventional,R6,Zea mays L. (*),68.6,4300.2,68.6,4300.2,1999
+10/5/1999,T1,Conventional,R5,Zea mays L. (*),57,3573.3,57,3573.3,1999
+10/5/1999,T1,Conventional,R1,Zea mays L. (*),52,3259.6,52,3259.6,1999
+7/13/1998,T2,No-Till,R6,Triticum aestivum L. (*),41.4,2778.9,41.4,2778.9,1998
+7/13/1998,T2,No-Till,R4,Triticum aestivum L. (*),41.2,2768.6,41.2,2768.6,1998
+7/13/1998,T21,,R5,Triticum aestivum L. (*),37.2,2500.2,37.2,2500.2,1998
+7/12/1998,T3,Reduced input with CC,R6,Triticum aestivum L. (*),36.1,2426.3,36.1,2426.3,1998
+7/12/1998,T3,Reduced input with CC,R5,Triticum aestivum L. (*),33.4,2247.5,33.4,2247.5,1998
+7/12/1998,T3,Reduced input with CC,R4,Triticum aestivum L. (*),34.8,2339.9,34.8,2339.9,1998
+7/12/1998,T3,Reduced input with CC,R3,Triticum aestivum L. (*),30.5,2052.6,30.5,2052.6,1998
+7/12/1998,T3,Reduced input with CC,R2,Triticum aestivum L. (*),31.9,2143.1,31.9,2143.1,1998
+7/11/1998,T1,Conventional,R1,Triticum aestivum L. (*),39.5,2651,39.5,2651,1998
+7/11/1998,T4,Organic with CC,R6,Triticum aestivum L. (*),15.4,1033,15.4,1033,1998
+7/11/1998,T4,Organic with CC,R5,Triticum aestivum L. (*),16.2,1090,16.2,1090,1998
+7/11/1998,T4,Organic with CC,R4,Triticum aestivum L. (*),20.9,1407.2,20.9,1407.2,1998
+7/11/1998,T4,Organic with CC,R3,Triticum aestivum L. (*),15.7,1051.9,15.7,1051.9,1998
+7/11/1998,T4,Organic with CC,R2,Triticum aestivum L. (*),15,1004.9,15,1004.9,1998
+7/11/1998,T4,Organic with CC,R1,Triticum aestivum L. (*),16.4,1099,16.4,1099,1998
+7/10/1998,T1,Conventional,R4,Triticum aestivum L. (*),44.6,2999.4,44.6,2999.4,1998
+7/10/1998,T1,Conventional,R3,Triticum aestivum L. (*),54.4,3654.6,54.4,3654.6,1998
+7/10/1998,T1,Conventional,R2,Triticum aestivum L. (*),45.8,3080.4,45.8,3080.4,1998
+7/10/1998,T1,Conventional,R6,Triticum aestivum L. (*),44.6,2994.1,44.6,2994.1,1998
+7/10/1998,T1,Conventional,R5,Triticum aestivum L. (*),40.3,2704.7,40.3,2704.7,1998
+7/10/1998,T3,Reduced input with CC,R1,Triticum aestivum L. (*),30.5,2046.7,30.5,2046.7,1998
+7/8/1998,T2,No-Till,R1,Triticum aestivum L. (*),39.7,2669.6,39.7,2669.6,1998
+7/8/1998,T2,No-Till,R2,Triticum aestivum L. (*),42.8,2875.3,42.8,2875.3,1998
+7/8/1998,T2,No-Till,R3,Triticum aestivum L. (*),43.4,2917.2,43.4,2917.2,1998
+10/21/1997,T4,Organic with CC,R2,Glycine max L. (*),25.1,1686.5,25.1,1686.5,1997
+10/21/1997,T4,Organic with CC,R3,Glycine max L. (*),25.2,1695.9,25.2,1695.9,1997
+10/21/1997,T4,Organic with CC,R4,Glycine max L. (*),26.4,1770.5,26.4,1770.5,1997
+10/21/1997,T4,Organic with CC,R1,Glycine max L. (*),26.3,1766.4,26.3,1766.4,1997
+10/20/1997,T2,No-Till,R4,Glycine max L. (*),29.7,1996.9,29.7,1996.9,1997
+10/20/1997,T2,No-Till,R3,Glycine max L. (*),31.3,2105.1,31.3,2105.1,1997
+10/20/1997,T2,No-Till,R2,Glycine max L. (*),30.6,2052.7,30.6,2052.7,1997
+10/20/1997,T2,No-Till,R1,Glycine max L. (*),33.2,2227.3,33.2,2227.3,1997
+10/20/1997,T3,Reduced input with CC,R1,Glycine max L. (*),26.1,1751.6,26.1,1751.6,1997
+10/20/1997,T3,Reduced input with CC,R3,Glycine max L. (*),24.6,1654.2,24.6,1654.2,1997
+10/20/1997,T3,Reduced input with CC,R2,Glycine max L. (*),31.1,2086.9,31.1,2086.9,1997
+10/20/1997,T4,Organic with CC,R5,Glycine max L. (*),23.7,1595.1,23.7,1595.1,1997
+10/19/1997,T2,No-Till,R6,Glycine max L. (*),27.3,1835.6,27.3,1835.6,1997
+10/19/1997,T21,,R5,Glycine max L. (*),,,,,1997
+10/19/1997,T3,Reduced input with CC,R6,Glycine max L. (*),24.6,1649.5,24.6,1649.5,1997
+10/19/1997,T4,Organic with CC,R6,Glycine max L. (*),20.7,1390.8,20.7,1390.8,1997
+10/18/1997,T1,Conventional,R3,Glycine max L. (*),23,1545.4,23,1545.4,1997
+10/18/1997,T1,Conventional,R1,Glycine max L. (*),17.5,1172.5,17.5,1172.5,1997
+10/18/1997,T1,Conventional,R2,Glycine max L. (*),25.8,1733.5,25.8,1733.5,1997
+10/18/1997,T1,Conventional,R4,Glycine max L. (*),24.9,1674.4,24.9,1674.4,1997
+10/18/1997,T3,Reduced input with CC,R5,Glycine max L. (*),26.4,1771.8,26.4,1771.8,1997
+10/18/1997,T3,Reduced input with CC,R4,Glycine max L. (*),29.3,1968.7,29.3,1968.7,1997
+10/17/1997,T1,Conventional,R5,Glycine max L. (*),22.5,1514.5,22.5,1514.5,1997
+10/17/1997,T1,Conventional,R6,Glycine max L. (*),21.5,1447.3,21.5,1447.3,1997
+11/5/1996,T3,Reduced input with CC,R3,Zea mays L. (*),59.9,3756,59.9,3756,1996
+11/4/1996,T1,Conventional,R3,Zea mays L. (*),74.3,4658,74.3,4658,1996
+11/4/1996,T1,Conventional,R2,Zea mays L. (*),47.9,3002,47.9,3002,1996
+11/4/1996,T2,No-Till,R1,Zea mays L. (*),49.9,3129,49.9,3129,1996
+11/4/1996,T3,Reduced input with CC,R1,Zea mays L. (*),60.7,3808,60.7,3808,1996
+11/4/1996,T4,Organic with CC,R2,Zea mays L. (*),51.1,3206,51.1,3206,1996
+11/4/1996,T4,Organic with CC,R1,Zea mays L. (*),28.4,1778,28.4,1778,1996
+11/3/1996,T1,Conventional,R1,Zea mays L. (*),37.7,2362,37.7,2362,1996
+11/3/1996,T2,No-Till,R2,Zea mays L. (*),73.3,4598,73.3,4598,1996
+11/2/1996,T1,Conventional,R4,Zea mays L. (*),46.1,2893,46.1,2893,1996
+11/2/1996,T2,No-Till,R3,Zea mays L. (*),78.9,4945,78.9,4945,1996
+11/2/1996,T2,No-Till,R4,Zea mays L. (*),75.2,4718,75.2,4718,1996
+11/2/1996,T3,Reduced input with CC,R4,Zea mays L. (*),62.2,3902,62.2,3902,1996
+11/2/1996,T3,Reduced input with CC,R2,Zea mays L. (*),80.4,5040,80.4,5040,1996
+11/2/1996,T4,Organic with CC,R4,Zea mays L. (*),42.7,2680,42.7,2680,1996
+11/2/1996,T4,Organic with CC,R3,Zea mays L. (*),47.9,3006,47.9,3006,1996
+10/31/1996,T1,Conventional,R6,Zea mays L. (*),70.5,4418,70.5,4418,1996
+10/31/1996,T1,Conventional,R5,Zea mays L. (*),29.9,1875,29.9,1875,1996
+10/31/1996,T3,Reduced input with CC,R5,Zea mays L. (*),66,4139,66,4139,1996
+10/29/1996,T3,Reduced input with CC,R6,Zea mays L. (*),70.5,4423,70.5,4423,1996
+10/29/1996,T4,Organic with CC,R6,Zea mays L. (*),42.8,2684,42.8,2684,1996
+10/26/1996,T2,No-Till,R6,Zea mays L. (*),44.9,2815,44.9,2815,1996
+10/26/1996,T21,,R5,Zea mays L. (*),,,,,1996
+10/26/1996,T4,Organic with CC,R5,Zea mays L. (*),28.9,1810,28.9,1810,1996
+7/26/1995,T1,Conventional,R6,Triticum aestivum L. (*),47.4,3182.4,47.4,3182.4,1995
+7/26/1995,T1,Conventional,R5,Triticum aestivum L. (*),49.8,3344.7,49.8,3344.7,1995
+7/26/1995,T1,Conventional,R4,Triticum aestivum L. (*),46.7,3140.3,46.7,3140.3,1995
+7/26/1995,T1,Conventional,R3,Triticum aestivum L. (*),49.7,3336.3,49.7,3336.3,1995
+7/26/1995,T1,Conventional,R2,Triticum aestivum L. (*),54.3,3649.1,54.3,3649.1,1995
+7/26/1995,T1,Conventional,R1,Triticum aestivum L. (*),47,3158.9,47,3158.9,1995
+7/26/1995,T2,No-Till,R3,Triticum aestivum L. (*),55.1,3700.9,55.1,3700.9,1995
+7/26/1995,T2,No-Till,R6,Triticum aestivum L. (*),46.9,3147.7,46.9,3147.7,1995
+7/26/1995,T2,No-Till,R4,Triticum aestivum L. (*),53,3561.9,53,3561.9,1995
+7/26/1995,T2,No-Till,R2,Triticum aestivum L. (*),50.5,3392.8,50.5,3392.8,1995
+7/26/1995,T2,No-Till,R1,Triticum aestivum L. (*),53.9,3619.4,53.9,3619.4,1995
+7/26/1995,T21,,R5,Triticum aestivum L. (*),,,,,1995
+7/26/1995,T3,Reduced input with CC,R6,Triticum aestivum L. (*),46.6,3131.2,46.6,3131.2,1995
+7/26/1995,T3,Reduced input with CC,R5,Triticum aestivum L. (*),45.7,3069.9,45.7,3069.9,1995
+7/26/1995,T3,Reduced input with CC,R4,Triticum aestivum L. (*),47.5,3188.6,47.5,3188.6,1995
+7/26/1995,T3,Reduced input with CC,R3,Triticum aestivum L. (*),49.1,3300.6,49.1,3300.6,1995
+7/26/1995,T3,Reduced input with CC,R2,Triticum aestivum L. (*),48.9,3283,48.9,3283,1995
+7/26/1995,T3,Reduced input with CC,R1,Triticum aestivum L. (*),46,3090.8,46,3090.8,1995
+7/26/1995,T4,Organic with CC,R6,Triticum aestivum L. (*),32.2,2163.7,32.2,2163.7,1995
+7/26/1995,T4,Organic with CC,R5,Triticum aestivum L. (*),31.6,2123.3,31.6,2123.3,1995
+7/26/1995,T4,Organic with CC,R4,Triticum aestivum L. (*),31.5,2113.3,31.5,2113.3,1995
+7/26/1995,T4,Organic with CC,R3,Triticum aestivum L. (*),33.4,2242.4,33.4,2242.4,1995
+7/26/1995,T4,Organic with CC,R2,Triticum aestivum L. (*),35.7,2401.1,35.7,2401.1,1995
+7/26/1995,T4,Organic with CC,R1,Triticum aestivum L. (*),31.5,2116.9,31.5,2116.9,1995
+10/11/1994,T1,Conventional,R2,Glycine max L. (*),47,3158,47,3158,1994
+10/11/1994,T1,Conventional,R1,Glycine max L. (*),40,2688,40,2688,1994
+10/11/1994,T1,Conventional,R6,Glycine max L. (*),48,3225,48,3225,1994
+10/11/1994,T1,Conventional,R5,Glycine max L. (*),40,2688,40,2688,1994
+10/11/1994,T1,Conventional,R4,Glycine max L. (*),48,3225,48,3225,1994
+10/11/1994,T1,Conventional,R3,Glycine max L. (*),46,3091,46,3091,1994
+10/11/1994,T2,No-Till,R6,Glycine max L. (*),44,2956,44,2956,1994
+10/11/1994,T2,No-Till,R4,Glycine max L. (*),46,3091,46,3091,1994
+10/11/1994,T2,No-Till,R3,Glycine max L. (*),44,2956,44,2956,1994
+10/11/1994,T2,No-Till,R2,Glycine max L. (*),41,2755,41,2755,1994
+10/11/1994,T2,No-Till,R1,Glycine max L. (*),38,2553,38,2553,1994
+10/11/1994,T21,,R5,Glycine max L. (*),,,,,1994
+10/11/1994,T3,Reduced input with CC,R6,Glycine max L. (*),52,3494,52,3494,1994
+10/11/1994,T3,Reduced input with CC,R5,Glycine max L. (*),42,2822,42,2822,1994
+10/11/1994,T3,Reduced input with CC,R4,Glycine max L. (*),40,2688,40,2688,1994
+10/11/1994,T3,Reduced input with CC,R3,Glycine max L. (*),50,3360,50,3360,1994
+10/11/1994,T3,Reduced input with CC,R2,Glycine max L. (*),40,2688,40,2688,1994
+10/11/1994,T3,Reduced input with CC,R1,Glycine max L. (*),52,3494,52,3494,1994
+10/11/1994,T4,Organic with CC,R6,Glycine max L. (*),52,3494,52,3494,1994
+10/11/1994,T4,Organic with CC,R5,Glycine max L. (*),42,2822,42,2822,1994
+10/11/1994,T4,Organic with CC,R4,Glycine max L. (*),48,3225,48,3225,1994
+10/11/1994,T4,Organic with CC,R3,Glycine max L. (*),49,3292,49,3292,1994
+10/11/1994,T4,Organic with CC,R2,Glycine max L. (*),49,3292,49,3292,1994
+10/11/1994,T4,Organic with CC,R1,Glycine max L. (*),45,3024,45,3024,1994
+11/9/1993,T1,Conventional,R6,Zea mays L. (*),133.6,8376,133.6,8376,1993
+11/9/1993,T1,Conventional,R5,Zea mays L. (*),117.9,7392,117.9,7392,1993
+11/9/1993,T1,Conventional,R4,Zea mays L. (*),116,7285,116,7285,1993
+11/9/1993,T1,Conventional,R3,Zea mays L. (*),93.3,5849,93.3,5849,1993
+11/9/1993,T1,Conventional,R2,Zea mays L. (*),103.5,6491,103.5,6491,1993
+11/9/1993,T1,Conventional,R1,Zea mays L. (*),116.2,7287.9,116.2,7287.9,1993
+11/9/1993,T2,No-Till,R1,Zea mays L. (*),120.8,7574,120.8,7574,1993
+11/9/1993,T2,No-Till,R6,Zea mays L. (*),120.3,7546,120.3,7546,1993
+11/9/1993,T2,No-Till,R5,Zea mays L. (*),99.2,6219,99.2,6219,1993
+11/9/1993,T2,No-Till,R4,Zea mays L. (*),105.1,6593,105.1,6593,1993
+11/9/1993,T2,No-Till,R3,Zea mays L. (*),108.7,6820,108.7,6820,1993
+11/9/1993,T2,No-Till,R2,Zea mays L. (*),124.1,7785,124.1,7785,1993
+11/9/1993,T3,Reduced input with CC,R6,Zea mays L. (*),100.5,6302,100.5,6302,1993
+11/9/1993,T3,Reduced input with CC,R5,Zea mays L. (*),74.4,4665,74.4,4665,1993
+11/9/1993,T3,Reduced input with CC,R4,Zea mays L. (*),75.6,4743,75.6,4743,1993
+11/9/1993,T3,Reduced input with CC,R3,Zea mays L. (*),70.1,4398,70.1,4398,1993
+11/9/1993,T3,Reduced input with CC,R2,Zea mays L. (*),82,5145,82,5145,1993
+11/9/1993,T3,Reduced input with CC,R1,Zea mays L. (*),80.4,5043,80.4,5043,1993
+11/9/1993,T4,Organic with CC,R6,Zea mays L. (*),46.6,2921,46.6,2921,1993
+11/9/1993,T4,Organic with CC,R5,Zea mays L. (*),42.3,2655,42.3,2655,1993
+11/9/1993,T4,Organic with CC,R4,Zea mays L. (*),59.7,3746,59.7,3746,1993
+11/9/1993,T4,Organic with CC,R3,Zea mays L. (*),64.2,4029,64.2,4029,1993
+11/9/1993,T4,Organic with CC,R2,Zea mays L. (*),57.1,3582,57.1,3582,1993
+11/9/1993,T4,Organic with CC,R1,Zea mays L. (*),41.2,2585,41.2,2585,1993
+10/26/1992,T1,Conventional,R1,Glycine max L. (*),28.3,1898,28.3,1898,1992
+10/26/1992,T1,Conventional,R6,Glycine max L. (*),27.2,1825,27.2,1825,1992
+10/26/1992,T1,Conventional,R5,Glycine max L. (*),28.6,1920,28.6,1920,1992
+10/26/1992,T1,Conventional,R4,Glycine max L. (*),26.3,1766,26.3,1766,1992
+10/26/1992,T1,Conventional,R3,Glycine max L. (*),27.1,1820,27.1,1820,1992
+10/26/1992,T1,Conventional,R2,Glycine max L. (*),26.9,1806,26.9,1806,1992
+10/26/1992,T2,No-Till,R6,Glycine max L. (*),35.5,2383,35.5,2383,1992
+10/26/1992,T2,No-Till,R5,Glycine max L. (*),33.8,2273,33.8,2273,1992
+10/26/1992,T2,No-Till,R4,Glycine max L. (*),32.1,2154,32.1,2154,1992
+10/26/1992,T2,No-Till,R3,Glycine max L. (*),32.9,2213,32.9,2213,1992
+10/26/1992,T2,No-Till,R2,Glycine max L. (*),30.9,2078,30.9,2078,1992
+10/26/1992,T2,No-Till,R1,Glycine max L. (*),33,2214,33,2214,1992
+7/21/1992,T3,Reduced input with CC,R2,Triticum aestivum L. (*),39.4,2650,39.4,2650,1992
+7/21/1992,T3,Reduced input with CC,R6,Triticum aestivum L. (*),17,1140,17,1140,1992
+7/21/1992,T3,Reduced input with CC,R5,Triticum aestivum L. (*),32.7,2194,32.7,2194,1992
+7/21/1992,T3,Reduced input with CC,R4,Triticum aestivum L. (*),39.3,2642,39.3,2642,1992
+7/21/1992,T3,Reduced input with CC,R3,Triticum aestivum L. (*),38.7,2599,38.7,2599,1992
+7/21/1992,T3,Reduced input with CC,R1,Triticum aestivum L. (*),36.8,2475,36.8,2475,1992
+7/21/1992,T4,Organic with CC,R6,Triticum aestivum L. (*),11.5,771,11.5,771,1992
+7/21/1992,T4,Organic with CC,R5,Triticum aestivum L. (*),19,1279,19,1279,1992
+7/21/1992,T4,Organic with CC,R4,Triticum aestivum L. (*),23.1,1550,23.1,1550,1992
+7/21/1992,T4,Organic with CC,R3,Triticum aestivum L. (*),25.7,1725,25.7,1725,1992
+7/21/1992,T4,Organic with CC,R2,Triticum aestivum L. (*),24.3,1630,24.3,1630,1992
+7/21/1992,T4,Organic with CC,R1,Triticum aestivum L. (*),29.3,1966,29.3,1966,1992
+10/10/1991,T1,Conventional,R2,Zea mays L. (*),137.3,8612,137.3,8612,1991
+10/10/1991,T1,Conventional,R6,Zea mays L. (*),125.3,7856,125.3,7856,1991
+10/10/1991,T1,Conventional,R5,Zea mays L. (*),,,,,1991
+10/10/1991,T1,Conventional,R4,Zea mays L. (*),114.4,7172,114.4,7172,1991
+10/10/1991,T1,Conventional,R3,Zea mays L. (*),154.1,9662,154.1,9662,1991
+10/10/1991,T1,Conventional,R1,Zea mays L. (*),,,,,1991
+10/10/1991,T2,No-Till,R6,Zea mays L. (*),122.1,7658,122.1,7658,1991
+10/10/1991,T2,No-Till,R5,Zea mays L. (*),134.6,8444,134.6,8444,1991
+10/10/1991,T2,No-Till,R4,Zea mays L. (*),129,8092,129,8092,1991
+10/10/1991,T2,No-Till,R3,Zea mays L. (*),126.1,7909,126.1,7909,1991
+10/10/1991,T2,No-Till,R2,Zea mays L. (*),,,,,1991
+10/10/1991,T2,No-Till,R1,Zea mays L. (*),,,,,1991
+10/1/1991,T3,Reduced input with CC,R1,Glycine max L. (*),48.1,3230,48.1,3230,1991
+10/1/1991,T3,Reduced input with CC,R6,Glycine max L. (*),40.6,2725,40.6,2725,1991
+10/1/1991,T3,Reduced input with CC,R5,Glycine max L. (*),46.7,3141,46.7,3141,1991
+10/1/1991,T3,Reduced input with CC,R4,Glycine max L. (*),47.3,3176,47.3,3176,1991
+10/1/1991,T3,Reduced input with CC,R3,Glycine max L. (*),51,3427,51,3427,1991
+10/1/1991,T3,Reduced input with CC,R2,Glycine max L. (*),50.1,3363,50.1,3363,1991
+10/1/1991,T4,Organic with CC,R6,Glycine max L. (*),43.7,2934,43.7,2934,1991
+10/1/1991,T4,Organic with CC,R5,Glycine max L. (*),41,2757,41,2757,1991
+10/1/1991,T4,Organic with CC,R4,Glycine max L. (*),49.5,3329,49.5,3329,1991
+10/1/1991,T4,Organic with CC,R3,Glycine max L. (*),47.5,3193,47.5,3193,1991
+10/1/1991,T4,Organic with CC,R2,Glycine max L. (*),50.4,3388,50.4,3388,1991
+10/1/1991,T4,Organic with CC,R1,Glycine max L. (*),48.9,3284,48.9,3284,1991
+11/12/1990,T3,Reduced input with CC,R1,Zea mays L. (*),85.5,5363,85.5,5363,1990
+11/12/1990,T3,Reduced input with CC,R6,Zea mays L. (*),55,3446,55,3446,1990
+11/12/1990,T3,Reduced input with CC,R5,Zea mays L. (*),53.5,3353,53.5,3353,1990
+11/12/1990,T3,Reduced input with CC,R4,Zea mays L. (*),60.4,3786,60.4,3786,1990
+11/12/1990,T3,Reduced input with CC,R3,Zea mays L. (*),106.1,6655,106.1,6655,1990
+11/12/1990,T3,Reduced input with CC,R2,Zea mays L. (*),74.5,4673,74.5,4673,1990
+11/12/1990,T4,Organic with CC,R6,Zea mays L. (*),53.7,3368,53.7,3368,1990
+11/12/1990,T4,Organic with CC,R5,Zea mays L. (*),51.5,3230,51.5,3230,1990
+11/12/1990,T4,Organic with CC,R4,Zea mays L. (*),74.2,4653,74.2,4653,1990
+11/12/1990,T4,Organic with CC,R3,Zea mays L. (*),71.6,4489,71.6,4489,1990
+11/12/1990,T4,Organic with CC,R2,Zea mays L. (*),95.7,6005,95.7,6005,1990
+11/12/1990,T4,Organic with CC,R1,Zea mays L. (*),97.4,6108,97.4,6108,1990
+10/17/1990,T1,Conventional,R6,Glycine max L. (*),43.6,2929,43.6,2929,1990
+10/17/1990,T1,Conventional,R5,Glycine max L. (*),42,2824,42,2824,1990
+10/17/1990,T1,Conventional,R4,Glycine max L. (*),38.9,2612,38.9,2612,1990
+10/17/1990,T1,Conventional,R3,Glycine max L. (*),44,2959,44,2959,1990
+10/17/1990,T1,Conventional,R2,Glycine max L. (*),43.1,2893,43.1,2893,1990
+10/17/1990,T1,Conventional,R1,Glycine max L. (*),42.1,2831,42.1,2831,1990
+10/17/1990,T2,No-Till,R1,Glycine max L. (*),43.7,2935,43.7,2935,1990
+10/17/1990,T2,No-Till,R6,Glycine max L. (*),46.4,3116,46.4,3116,1990
+10/17/1990,T2,No-Till,R5,Glycine max L. (*),44.7,3003,44.7,3003,1990
+10/17/1990,T2,No-Till,R4,Glycine max L. (*),43.2,2906,43.2,2906,1990
+10/17/1990,T2,No-Till,R3,Glycine max L. (*),40.3,2710,40.3,2710,1990
+10/17/1990,T2,No-Till,R2,Glycine max L. (*),47.2,3169,47.2,3169,1990
+10/23/1989,T1,Conventional,R3,Zea mays L. (*),120.9,7582,120.9,7582,1989
+10/23/1989,T1,Conventional,R2,Zea mays L. (*),131.5,8245,131.5,8245,1989
+10/23/1989,T1,Conventional,R6,Zea mays L. (*),155.8,9772,155.8,9772,1989
+10/23/1989,T1,Conventional,R5,Zea mays L. (*),112.5,7059,112.5,7059,1989
+10/23/1989,T1,Conventional,R1,Zea mays L. (*),107.6,6749,107.6,6749,1989
+10/23/1989,T1,Conventional,R4,Zea mays L. (*),128,8028,128,8028,1989
+10/23/1989,T2,No-Till,R4,Zea mays L. (*),116.6,7311,116.6,7311,1989
+10/23/1989,T2,No-Till,R3,Zea mays L. (*),133.1,8348,133.1,8348,1989
+10/23/1989,T2,No-Till,R2,Zea mays L. (*),127,7964,127,7964,1989
+10/23/1989,T2,No-Till,R1,Zea mays L. (*),130.1,8160,130.1,8160,1989
+10/23/1989,T2,No-Till,R6,Zea mays L. (*),133.4,8364,133.4,8364,1989
+10/23/1989,T2,No-Till,R5,Zea mays L. (*),136,8528,136,8528,1989
+7/17/1989,T3,Reduced input with CC,R1,Triticum aestivum L. (*),23.8,1597,23.8,1597,1989
+7/17/1989,T3,Reduced input with CC,R2,Triticum aestivum L. (*),27.2,1826,27.2,1826,1989
+7/17/1989,T3,Reduced input with CC,R3,Triticum aestivum L. (*),25.6,1718,25.6,1718,1989
+7/17/1989,T3,Reduced input with CC,R4,Triticum aestivum L. (*),26.7,1793,26.7,1793,1989
+7/17/1989,T3,Reduced input with CC,R5,Triticum aestivum L. (*),27.6,1857,27.6,1857,1989
+7/17/1989,T3,Reduced input with CC,R6,Triticum aestivum L. (*),47.1,3168,47.1,3168,1989
+7/17/1989,T4,Organic with CC,R1,Triticum aestivum L. (*),26,1746,26,1746,1989
+7/17/1989,T4,Organic with CC,R4,Triticum aestivum L. (*),26.7,1792,26.7,1792,1989
+7/17/1989,T4,Organic with CC,R3,Triticum aestivum L. (*),29,1946,29,1946,1989
+7/17/1989,T4,Organic with CC,R6,Triticum aestivum L. (*),41.4,2784,41.4,2784,1989
+7/17/1989,T4,Organic with CC,R2,Triticum aestivum L. (*),26.9,1804,26.9,1804,1989
+7/17/1989,T4,Organic with CC,R5,Triticum aestivum L. (*),24.9,1675,24.9,1675,1989
