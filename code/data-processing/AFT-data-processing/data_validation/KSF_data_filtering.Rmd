@@ -15,7 +15,8 @@ library(readr)
 ```
 
 ```{r}
-KFS <- read_csv("C:/Users/AyshaTappRoss/OneDrive - American Farmland Trust/Desktop/Github/soilc-PSHEC-AFT/data/AFT-data/KFS_PSHEC_yield_data_validation.csv")
+
+KFS <- read_csv("/Github/soilc-PSHEC-AFT/data/AFT-data/KFS_PSHEC_yield_data_validation.csv")
 head(KFS)
 ```
 
@@ -26,19 +27,23 @@ data_val
 ```
 
 ```{r}
-write.csv(data_val, "C:/Users/AyshaTappRoss/OneDrive - American Farmland Trust/Desktop/Github/soilc-PSHEC-AFT/data/AFT-data/filtered_KFS_PSHEC_yield_data_validation.csv")
+
+write.csv(data_val, "/Github/soilc-PSHEC-AFT/data/AFT-data/filtered_KFS_PSHEC_yield_data_validation.csv")
+
 ```
 
 C and N data filtering 
 
 ```{r}
-KFS_C <- read_csv("C:/Users/AyshaTappRoss/OneDrive - American Farmland Trust/Desktop/Github/soilc-PSHEC-AFT/data/AFT-data/KFS_C_and_N_data.csv")
+
+KFS_C <- read_csv("/Github/soilc-PSHEC-AFT/data/AFT-data/KFS_C_and_N_data.csv")
 head(KFS_C)
 ```
 
 
 ```{r}
-data_val_C <- filter(KFS_C, treatment %in% c("T1", "T2", "T3", "T4"))
+
+data_val_C <- filter(KFS_C, treatment %in% c("T1","T2", "T3", "T4"))
 data_val_C <- data_val_C [ , -c(10:11)]
 data_val_C
 
@@ -46,27 +51,32 @@ data_val_C
 
 
 ```{r}
-write.csv(data_val_C, "C:/Users/AyshaTappRoss/OneDrive - American Farmland Trust/Desktop/Github/soilc-PSHEC-AFT/data/AFT-data/filtered_KFS_PSHEC_C_data_validation.csv")
+
+write.csv(data_val_C, "/Github/soilc-PSHEC-AFT/data/AFT-data/filtered_KFS_PSHEC_C_data_validation.csv")
+
 ```
 
 Bulk Density data filtering 
 
 
 ```{r}
-KFS_BD <- read_csv("C:/Users/AyshaTappRoss/OneDrive - American Farmland Trust/Desktop/Github/soilc-PSHEC-AFT/data/AFT-data/KFS_bulk_density_data.csv")
+
+KFS_BD <- read_csv("/Github/soilc-PSHEC-AFT/data/AFT-data/KFS_bulk_density_data.csv")
 head(KFS_BD)
 ```
 
 
 
 ```{r}
+
 data_val_BD <- filter(KFS_BD, treatment %in% c("T1", "T2", "T3", "T4"))
 data_val_BD <- data_val_BD [ , -c(13)]
 data_val_BD
+
 ```
 
 
 
 ```{r}
-write.csv(data_val_BD, "C:/Users/AyshaTappRoss/OneDrive - American Farmland Trust/Desktop/Github/soilc-PSHEC-AFT/data/AFT-data/filtered_KFS_PSHEC_Bulk_density_data_validation.csv")
+write.csv(data_val_BD, "/Github/soilc-PSHEC-AFT/data/AFT-data/filtered_KFS_PSHEC_Bulk_density_data_validation.csv")
 ```

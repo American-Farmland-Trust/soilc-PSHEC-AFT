@@ -1,3 +1,4 @@
+
 "","year","treatment","Treatment_Type","replicate","station","core","section","horizon_length","core_volume_cm3","gravel_free_bulk_density","total_bulk_density","gravel_weight_g"
 "1","2022","T1","Conventional","R1","S1",1,"0-10cm","10","456.04","1.28","1.38","46.3"
 "2","2022","T1","Conventional","R1","S1",1,"10-25cm","15","684.06","1.66","1.77","75.87"
